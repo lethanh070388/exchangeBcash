@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Layout</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+    <link href="../css/addons/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+    <link href="../css/addons/datatables.min.css" rel="stylesheet"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/app.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="wrapper main-wrapper-bg">
+      <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar">
+        <div class="container"><a class="navbar-brand" href="./index.html"><img src="../assets/logo.png" alt=""/></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav w-100">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBTC" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BTC</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownBTC"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownETH" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ETH</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownETH"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBCash" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BCASH</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownBCash"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">LTC</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">XMR</a></li>
+              <li class="nav-item dropdown ml-auto"><a class="nav-link dropdown-toggle" href="./order.html" id="navbarDropdownOrder" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="far fa-file-alt pr-1"></i>Order</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownOrder"><a class="dropdown-item" href="./order.html">OTC Orders</a><a class="dropdown-item" href="./order.html">Exchange Orders</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./wallet.html" id="navbarDropdownWallet" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-wallet pr-1"></i>Assets</a>
+                <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdownWallet"><a class="dropdown-item" href="./wallet.html"> <span class="text-blue font-bold">OTC Account</span>
+                    <table class="table table-sm mt-2">
+                      <thead>
+                        <tr>
+                          <th>Coin</th>
+                          <th>Available</th>
+                          <th>Frozen</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>ETH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>BCASH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>LTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>XMR</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                      </tbody>
+                    </table><span class="text-blue font-bold">Exchange Account</span>
+                    <table class="table table-sm mt-2">
+                      <thead>
+                        <tr>
+                          <th>Coin</th>
+                          <th>Available</th>
+                          <th>Frozen</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>ETH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>BCASH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>LTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>XMR</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                      </tbody>
+                    </table></a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./user_profile.html" id="navbarDropdownUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-user-circle pr-1"></i>User</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownUser"><a class="dropdown-item" href="./user_profile.html">User Center</a><a class="dropdown-item" href="#">Advertisements</a><a class="dropdown-item" href="#">Invite friends</a><a class="dropdown-item" href="./index.html">Log out</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">| Lang</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">English</a><a class="dropdown-item" href="#">Vietnamese</a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <main class="main-content">   
+        <div class="content-wrapper-fluid px-2 exchange-container">
+          <div class="container-fluid bg-white py-3 px-0 content">
+            <div class="row no-gutters">
+              <div class="col-xl-8 px-2 mb-4">
+                <div class="graph-section border mb-4">
+                  <div class="container-fluid p-0">
+                    <div class="row no-gutters border-bottom">
+                      <div class="col d-flex flex-wrap p-2">
+                        <div class="dropdown pr-2">
+                          <button class="btn btn-light dropdown-toggle font-bold p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BTC/USDT</button>
+                          <div class="dropdown-menu bg-white px-3" aria-labelledby="dropdownMenu2">
+                            <div class="row no-gutters">
+                              <div class="col font-small">
+                                <ul class="nav nav-tabs custom-tabs mb-2" role="tablist">
+                                  <li class="nav-item mr-3"><a class="active px-2" data-toggle="tab" href="#newsUSDT">USDT</a></li>
+                                  <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#newsBTC">BTC</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                  <div class="container tab-pane active p-0" id="newsUSDT">
+                                    <div class="row no-gutters">
+                                      <div class="col">
+                                        <table class="table table-sm">
+                                          <thead>
+                                            <tr>
+                                              <th class="text-left">Pair</th>
+                                              <th class="text-center">Price</th>
+                                              <th class="text-center nowrap">Change rate</th>
+                                              <th class="text-right">Volumne</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td class="text-left"><a href="#">BTC/USDT </a></td>
+                                              <td class="text-center">3614.13</td>
+                                              <td class="text-center text-green">+6.43%</td>
+                                              <td class="text-right">35.123456</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-left"><a href="#">BTC/USDT </a></td>
+                                              <td class="text-center">3614.13</td>
+                                              <td class="text-center text-red">-6.43%</td>
+                                              <td class="text-right">35.123456</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-left"><a href="#">BTC/USDT </a></td>
+                                              <td class="text-center">3614.13</td>
+                                              <td class="text-center text-green">+6.43%</td>
+                                              <td class="text-right">35.123456</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-left"><a href="#">BTC/USDT </a></td>
+                                              <td class="text-center">3614.13</td>
+                                              <td class="text-center text-green">+6.43%</td>
+                                              <td class="text-right">35.123456</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="container tab-pane p-0" id="newsBTC">
+                                    <div class="row no-gutters">
+                                      <div class="col">
+                                        <table class="table table-sm">
+                                          <thead>
+                                            <tr>
+                                              <th class="text-left">Pair</th>
+                                              <th class="text-center">Price</th>
+                                              <th class="text-center nowrap">Change rate</th>
+                                              <th class="text-right">Volumne</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            <tr>
+                                              <td class="text-left"><a href="#">BTC/USDT </a></td>
+                                              <td class="text-center">3614.13</td>
+                                              <td class="text-center text-red">-6.43%</td>
+                                              <td class="text-right">35.123456</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-left"><a href="#">BTC/USDT </a></td>
+                                              <td class="text-center">3614.13</td>
+                                              <td class="text-center text-red">-6.43%</td>
+                                              <td class="text-right">35.123456</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-left"><a href="#">BTC/USDT </a></td>
+                                              <td class="text-center">3614.13</td>
+                                              <td class="text-center text-green">+6.43%</td>
+                                              <td class="text-right">35.123456</td>
+                                            </tr>
+                                            <tr>
+                                              <td class="text-left"><a href="#">BTC/USDT </a></td>
+                                              <td class="text-center">3614.13</td>
+                                              <td class="text-center text-green">+6.43%</td>
+                                              <td class="text-right">35.123456</td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <h6 class="font-bold m-0 align-self-center">3524.47</h6><span class="pr-2 align-self-center">~ 3529.49 USD</span><span class="pr-2 align-self-center">Change rate <span class="text-green">+5.80%</span></span><span class="pr-2 align-self-center">High 3553.66</span><span class="pr-2 align-self-center">Low 3270.60</span><span class="pr-2 align-self-center">Volume 36.697337</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="graph"></div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-lg-6 pr-lg-2 d-flex flex-column flex-lg-row mb-4">
+                    <div class="row no-gutters border w-100">
+                      <div class="col-lg-6">
+                        <table class="table table-sm">
+                          <thead class="bg-white-grey">
+                            <tr>
+                              <th class="text-left">Level</th>
+                              <th class="text-center">Quantity</th>
+                              <th class="text-right">Price</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="text-left">Buy 1</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-green">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Buy 2</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-green">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Buy 3</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-green">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Buy 4</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-green">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Buy 5</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-green">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Buy 6</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-green">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Buy 7</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-green">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Buy 8</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-green">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Buy 9</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-green">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Buy 10</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-green">3507.13</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="col-lg-6">
+                        <table class="table table-sm">
+                          <thead class="bg-white-grey">
+                            <tr>
+                              <th class="text-left">Level</th>
+                              <th class="text-center">Quantity</th>
+                              <th class="text-right">Price</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="text-left">Sell 1</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-red">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Sell 2</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-red">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Sell 3</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-red">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Sell 4</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-red">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Sell 5</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-red">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Sell 6</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-red">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Sell 7</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-red">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Sell 8</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-red">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Sell 9</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-red">3507.13</td>
+                            </tr>
+                            <tr>
+                              <td class="text-left">Sell 10</td>
+                              <td class="text-center">0.004400</td>
+                              <td class="text-right text-red">3507.13</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 pl-lg-2 mb-4">
+                    <div class="row no-gutters border">
+                      <div class="col">
+                        <ul class="nav nav-tabs custom-tabs mb-2 position-relative" role="tablist">
+                          <li class="nav-item mr-3"><a class="active px-2" data-toggle="tab" href="#orderLimit">Limit Order</a></li>
+                          <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#orderMarket">Market Order</a></li>
+                          <div class="absolute-link"><small>Fee
+                              <del class="pr-2">0.2%</del><span>0</span></small></div>
+                        </ul>
+                        <div class="tab-content">
+                          <div class="container tab-pane active p-0" id="orderLimit">
+                            <div class="row no-gutters">
+                              <div class="col-sm-6 px-2">
+                                <form class="form-group needs-validation" action="#" novalidate="novalidate">
+                                  <div class="form-group mb-3">
+                                    <div class="d-flex justify-content-between">
+                                      <label><span>Available: </span><span>0.00000000 USDT</span></label>
+                                    </div>
+                                    <hr class="my-0"/>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="input-group mb-1">
+                                      <div class="input-group-prepend">
+                                        <label class="input-group-text px-1"><small>Price</small></label>
+                                      </div>
+                                      <input class="form-control" type="number" required="required"/>
+                                      <div class="input-group-append">
+                                        <label class="input-group-text px-1"><small>USDT</small></label>
+                                      </div>
+                                    </div><small class="pl-3">≈ 0.00 USD</small>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <label class="input-group-text px-1"><small>Quantity</small></label>
+                                      </div>
+                                      <input class="form-control" type="number" required="required"/>
+                                      <div class="input-group-append">
+                                        <label class="input-group-text px-1"><small>BTC</small></label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group d-flex justify-content-lg-between justify-content-around">
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginBuy" id="margin25" value="25%"/>
+                                      <label class="form-check-label margin-label" for="margin25">25%</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginBuy" id="margin50" value="50%"/>
+                                      <label class="form-check-label margin-label" for="margin50">50%</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginBuy" id="margin75" value="75%"/>
+                                      <label class="form-check-label margin-label" for="margin75">75%</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginBuy" id="margin100" value="100%"/>
+                                      <label class="form-check-label margin-label" for="margin100">100%</label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group mb-3">
+                                    <div class="d-flex justify-content-between">
+                                      <label><span>Total: </span><span>1.00000000 USDT</span></label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group text-right">
+                                    <button class="btn btn-gradient-blue w-100" type="submit">Buy</button>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="col-sm-6 px-2">
+                                <form class="form-group needs-validation" action="#" novalidate="novalidate">
+                                  <div class="form-group mb-3">
+                                    <div class="d-flex justify-content-between">
+                                      <label><span>Available: </span><span>0.00000000 USDT</span></label>
+                                    </div>
+                                    <hr class="my-0"/>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="input-group mb-1">
+                                      <div class="input-group-prepend">
+                                        <label class="input-group-text px-1"><small>Price</small></label>
+                                      </div>
+                                      <input class="form-control" type="number" required="required"/>
+                                      <div class="input-group-append">
+                                        <label class="input-group-text px-1"><small>USDT</small></label>
+                                      </div>
+                                    </div><small class="pl-3">≈ 0.00 USD</small>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <label class="input-group-text px-1"><small>Quantity</small></label>
+                                      </div>
+                                      <input class="form-control" type="number" required="required"/>
+                                      <div class="input-group-append">
+                                        <label class="input-group-text px-1"><small>BTC</small></label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group d-flex justify-content-lg-between justify-content-around">
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginSell" id="margin25" value="25%"/>
+                                      <label class="form-check-label margin-label" for="margin25">25%</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginSell" id="margin50" value="50%"/>
+                                      <label class="form-check-label margin-label" for="margin50">50%</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginSell" id="margin75" value="75%"/>
+                                      <label class="form-check-label margin-label" for="margin75">75%</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginSell" id="margin100" value="100%"/>
+                                      <label class="form-check-label margin-label" for="margin100">100%</label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group mb-3">
+                                    <div class="d-flex justify-content-between">
+                                      <label><span>Total: </span><span>0.00000000 USDT</span></label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group text-right">
+                                    <button class="btn btn-gradient-orange w-100" type="submit">Sell</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="orderMarket">
+                            <div class="row no-gutters">
+                              <div class="col-lg-6 px-2">
+                                <form class="form-group needs-validation" action="#" novalidate="novalidate">
+                                  <div class="form-group mb-3">
+                                    <div class="d-flex justify-content-between">
+                                      <label><span>Available: </span><span>0.00000000 USDT</span></label>
+                                    </div>
+                                    <hr class="my-0"/>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="input-group mb-1">
+                                      <div class="input-group-prepend">
+                                        <label class="input-group-text px-1"><small>Price</small></label>
+                                      </div>
+                                      <input class="form-control" type="number" required="required"/>
+                                      <div class="input-group-append">
+                                        <label class="input-group-text px-1"><small>USDT</small></label>
+                                      </div>
+                                    </div><small class="pl-3">≈ 0.00 USD</small>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <label class="input-group-text px-1"><small>Quantity</small></label>
+                                      </div>
+                                      <input class="form-control" type="number" required="required"/>
+                                      <div class="input-group-append">
+                                        <label class="input-group-text px-1"><small>BTC</small></label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group d-flex justify-content-lg-between justify-content-around">
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginBuy" id="margin25" value="25%"/>
+                                      <label class="form-check-label margin-label" for="margin25">25%</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginBuy" id="margin50" value="50%"/>
+                                      <label class="form-check-label margin-label" for="margin50">50%</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginBuy" id="margin75" value="75%"/>
+                                      <label class="form-check-label margin-label" for="margin75">75%</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginBuy" id="margin100" value="100%"/>
+                                      <label class="form-check-label margin-label" for="margin100">100%</label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group mb-3">
+                                    <div class="d-flex justify-content-between">
+                                      <label><span>Total: </span><span>0.00000000 USDT</span></label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group text-right">
+                                    <button class="btn btn-gradient-blue w-100" type="submit">Buy</button>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="col-lg-6 px-2">
+                                <form class="form-group needs-validation" action="#" novalidate="novalidate">
+                                  <div class="form-group mb-3">
+                                    <div class="d-flex justify-content-between">
+                                      <label><span>Available: </span><span>0.00000000 USDT</span></label>
+                                    </div>
+                                    <hr class="my-0"/>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="input-group mb-1">
+                                      <div class="input-group-prepend">
+                                        <label class="input-group-text px-1"><small>Price</small></label>
+                                      </div>
+                                      <input class="form-control" type="number" required="required"/>
+                                      <div class="input-group-append">
+                                        <label class="input-group-text px-1"><small>USDT</small></label>
+                                      </div>
+                                    </div><small class="pl-3">≈ 0.00 USD</small>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                        <label class="input-group-text px-1"><small>Quantity</small></label>
+                                      </div>
+                                      <input class="form-control" type="number" required="required"/>
+                                      <div class="input-group-append">
+                                        <label class="input-group-text px-1"><small>BTC</small></label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group d-flex justify-content-lg-between justify-content-around">
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginSell" id="margin25" value="25%"/>
+                                      <label class="form-check-label margin-label" for="margin25">25%</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginSell" id="margin50" value="50%"/>
+                                      <label class="form-check-label margin-label" for="margin50">50%</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginSell" id="margin75" value="75%"/>
+                                      <label class="form-check-label margin-label" for="margin75">75%</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input d-none" type="radio" name="marginSell" id="margin100" value="100%"/>
+                                      <label class="form-check-label margin-label" for="margin100">100%</label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group mb-3">
+                                    <div class="d-flex justify-content-between">
+                                      <label><span>Total: </span><span>0.00000000 USDT</span></label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group text-right">
+                                    <button class="btn btn-gradient-orange w-100" type="submit">Sell</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 px-2 mb-4 d-flex flex-column pb-4">
+                <div class="trade-update border d-flex flex-column flex-grow-1">
+                  <table class="table table-sm">
+                    <thead class="bg-white-grey">
+                      <tr>
+                        <th class="text-left">Time</th>
+                        <th class="text-center">Size</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-right">Quantity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-red">Sell</td>
+                        <td class="text-center text-red">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-red">Sell</td>
+                        <td class="text-center text-red">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-red">Sell</td>
+                        <td class="text-center text-red">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-red">Sell</td>
+                        <td class="text-center text-red">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-red">Sell</td>
+                        <td class="text-center text-red">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-red">Sell</td>
+                        <td class="text-center text-red">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-red">Sell</td>
+                        <td class="text-center text-red">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-red">Sell</td>
+                        <td class="text-center text-red">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-red">Sell</td>
+                        <td class="text-center text-red">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-red">Sell</td>
+                        <td class="text-center text-red">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-red">Sell</td>
+                        <td class="text-center text-red">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-red">Sell</td>
+                        <td class="text-center text-red">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-green">Buy</td>
+                        <td class="text-center text-green">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">22:45:39</td>
+                        <td class="text-center text-red">Sell</td>
+                        <td class="text-center text-red">3513.45</td>
+                        <td class="text-right">0.0000589</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-md-8 px-2">
+                <div class="row no-gutters mb-4">
+                  <div class="col">
+                    <div class="collapse-control d-flex align-items-baseline"><i class="far fa-plus-square expand-icon-open mr-2 mb-2 text-grey"></i><i class="far fa-minus-square expand-icon-close mr-2 mb-2 text-grey"></i><a class="expand-button" data-toggle="collapse" href="#openOrders" role="button" aria-expanded="true" aria-controls="collapseOpenOrders">
+                        <h6 class="text-blue">Open Orders</h6></a></div>
+                    <div class="collapse" id="openOrders">
+                      <div class="expand-collapse-container">
+                        <table class="table-plugin">
+                          <thead>
+                            <tr>
+                              <th>Time</th>
+                              <th>Pairs</th>
+                              <th>Trade type</th>
+                              <th>Price(USDT)</th>
+                              <th>Amount(BTC)</th>
+                              <th>Total(USDT)</th>
+                              <th>Executed</th>
+                              <th>Unfilled</th>
+                              <th>Operation</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col">
+                    <div class="collapse-control d-flex align-items-baseline"><i class="far fa-plus-square expand-icon-open mr-2 mb-2 text-grey"></i><i class="far fa-minus-square expand-icon-close mr-2 mb-2 text-grey"></i><a class="expand-button" data-toggle="collapse" href="#orderHistory" role="button" aria-expanded="true" aria-controls="collapseOrderHistory">
+                        <h6 class="text-blue">Order History</h6></a></div>
+                    <div class="collapse" id="orderHistory">
+                      <div class="expand-collapse-container">
+                        <table class="table-plugin">
+                          <thead>
+                            <tr>
+                              <th>Time</th>
+                              <th>Pairs</th>
+                              <th>Trade type</th>
+                              <th>Amount</th>
+                              <th>Executed(BTC)</th>
+                              <th>Average Price</th>
+                              <th>Status</th>
+                              <th>Operation</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 px-2">
+                <div class="collapse-control d-flex align-items-baseline"><i class="far fa-plus-square expand-icon-open mr-2 mb-2 text-grey"></i><i class="far fa-minus-square expand-icon-close mr-2 mb-2 text-grey"></i><a class="expand-button" data-toggle="collapse" href="#marketDepth" role="button" aria-expanded="true" aria-controls="collapseMarketDepth">
+                    <h6 class="text-blue">Market depth</h6></a></div>
+                <div class="collapse" id="marketDepth">
+                  <div class="expand-collapse-container">
+                    <div class="market-depth"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="container-fluid bg-footer py-4">
+        <div class="container footer">
+          <div class="row justify-content-between">
+            <div class="cell">
+              <h6 class="font-bold pt-2">BCASH EXCHANGE</h6>
+              <div class="pb-2"><i class="fas fa-envelope pr-1"></i>Email: <a href="mailto:support@bcashpay.org">Support@BcashPay.org</a></div>
+              <div class="pb-2"><i class="fas fa-comments pr-1"></i><a href="#">Online support</a></div>
+              <div class="pb-4"><i class="fas fa-question-circle pr-1"></i><a href="./faq.html">Frequently Asked Questions</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">INTRODUCE</h6>
+              <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="./about.html">About us</a></div>
+              <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Fees</a></div>
+              <div class="pb-4"><i class="fas fa-chevron-circle-right pr-1"></i><a href="./policy_term.html">Policies and Terms</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">SOCIAL MEDIA</h6>
+              <div class="pb-2"><i class="fab fa-facebook-square pr-1"></i><a href="#">Facebook</a></div>
+              <div class="pb-2"><i class="fab fa-telegram pr-1"></i><a href="#">Telegram</a></div>
+              <div class="pb-4"><i class="fab fa-twitter pr-1"></i><a href="#">Twitter</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">SIGN UP FOR THE NEWSLETTER</h6>
+              <div class="pb-2">Please register to receive latest news from <b>BCASH Exchange</b></div>
+              <div class="input-group mb-3">
+                <input class="form-control" type="email" placeholder="Enter your mail" aria-label="Enter your mail" aria-describedby="button-addon2"/>
+                <div class="input-group-append">
+                  <button class="btn btn-gradient-orange" type="button" id="button-addon2">Agree</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bg-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col py-2">Designed by BCASH EXCHANGE. All rights reserved. © 2018</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/addons/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/addons/datatables.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                      if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                      }
+                      form.classList.add('was-validated');
+                  }, false);
+              });
+          }, false);
+      })();
+    </script>
+    <script>
+      $(function(){
+          var table = $('.table-plugin').DataTable({
+              searching: false,
+              ordering:  false,
+              info: false,
+              paging: false,
+              bLengthChange: false,
+              autoWidth: true,
+              scrollX: true
+          });
+      });
+    </script>
+  </body>
+</html>

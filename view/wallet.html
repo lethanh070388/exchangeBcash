@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Layout</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+    <link href="../css/addons/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+    <link href="../css/addons/datatables.min.css" rel="stylesheet"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/app.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="wrapper main-wrapper-bg">
+      <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar">
+        <div class="container"><a class="navbar-brand" href="./index.html"><img src="../assets/logo.png" alt=""/></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav w-100">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBTC" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BTC</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownBTC"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownETH" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ETH</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownETH"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBCash" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BCASH</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownBCash"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">LTC</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">XMR</a></li>
+              <li class="nav-item dropdown ml-auto"><a class="nav-link dropdown-toggle" href="./order.html" id="navbarDropdownOrder" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="far fa-file-alt pr-1"></i>Order</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownOrder"><a class="dropdown-item" href="./order.html">OTC Orders</a><a class="dropdown-item" href="./order.html">Exchange Orders</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./wallet.html" id="navbarDropdownWallet" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-wallet pr-1"></i>Assets</a>
+                <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdownWallet"><a class="dropdown-item" href="./wallet.html"> <span class="text-blue font-bold">OTC Account</span>
+                    <table class="table table-sm mt-2">
+                      <thead>
+                        <tr>
+                          <th>Coin</th>
+                          <th>Available</th>
+                          <th>Frozen</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>ETH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>BCASH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>LTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>XMR</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                      </tbody>
+                    </table><span class="text-blue font-bold">Exchange Account</span>
+                    <table class="table table-sm mt-2">
+                      <thead>
+                        <tr>
+                          <th>Coin</th>
+                          <th>Available</th>
+                          <th>Frozen</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>ETH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>BCASH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>LTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>XMR</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                      </tbody>
+                    </table></a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./user_profile.html" id="navbarDropdownUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-user-circle pr-1"></i>User</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownUser"><a class="dropdown-item" href="./user_profile.html">User Center</a><a class="dropdown-item" href="#">Advertisements</a><a class="dropdown-item" href="#">Invite friends</a><a class="dropdown-item" href="./index.html">Log out</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">| Lang</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">English</a><a class="dropdown-item" href="#">Vietnamese</a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <main class="main-content">   
+        <div class="content-wrapper flex-column align-items-center">
+          <div class="container bg-white mx-3 content mb-4">
+            <div class="row">
+              <div class="col py-4">
+                <h5>
+                   Total assets: <span class="value-lg text-blue">0.00000000 BTC </span><small>~ 0.00 USD</small></h5>
+                <div class="d-flex text-grey my-3"><span class="pr-5">Exchange Assets: 0.00000000 BTC</span><span>OTC assets: 0.00000000 BTC</span></div><small class="text-grey">Your OTC account and Exchange account both support deposits and withdrawals. There is no charge to transfer assets between your OTC and Exchange accounts.</small>
+              </div>
+            </div>
+          </div>
+          <div class="container bg-white mx-3 content mb-4">
+            <div class="row">
+              <div class="col py-4">
+                <ul class="nav nav-tabs custom-tabs my-3" role="tablist">
+                  <li class="nav-item"><a class="active" data-toggle="tab" href="#accountOTC">OTC Account</a></li>
+                  <li class="nav-item"><a data-toggle="tab" href="#accountExchange">Exchange Account</a></li>
+                </ul>
+                <div class="tab-content mb-5">
+                  <div class="container tab-pane active p-0" id="accountOTC">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <table class="table-plugin">
+                          <thead>
+                            <tr>
+                              <th class="text-left">Coin</th>
+                              <th class="text-left">Available</th>
+                              <th class="text-left">Frozen</th>
+                              <th class="text-left">Operation</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="text-left"><a class="text-blue font-bold" href="./buy.html">BTC</a></td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left d-flex flex-wrap"><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalDeposit">Deposit</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalWithdraw">Withdraw</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalTransfer">Transfer</a><a class="text-green pr-3" href="./all.html">Transaction History</a><a class="text-green pr-3" href="./buy.html">Trade</a></td>
+                            </tr>
+                            <tr>
+                              <td class="text-left"><a class="text-blue font-bold" href="./buy.html">ETH</a></td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left d-flex flex-wrap"><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalDeposit">Deposit</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalWithdraw">Withdraw</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalTransfer">Transfer</a><a class="text-green pr-3" href="./all.html">Transaction History</a><a class="text-green pr-3" href="./buy.html">Trade</a></td>
+                            </tr>
+                            <tr>
+                              <td class="text-left"><a class="text-blue font-bold" href="./buy.html">BCASH</a></td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left d-flex flex-wrap"><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalDeposit">Deposit</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalWithdraw">Withdraw</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalTransfer">Transfer</a><a class="text-green pr-3" href="./all.html">Transaction History</a><a class="text-green pr-3" href="./buy.html">Trade</a></td>
+                            </tr>
+                            <tr>
+                              <td class="text-left"><a class="text-blue font-bold" href="./buy.html">LTC</a></td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left d-flex flex-wrap"><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalDeposit">Deposit</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalWithdraw">Withdraw</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalTransfer">Transfer</a><a class="text-green pr-3" href="./all.html">Transaction History</a><a class="text-green pr-3" href="./buy.html">Trade</a></td>
+                            </tr>
+                            <tr>
+                              <td class="text-left"><a class="text-blue font-bold" href="./buy.html">XMR</a></td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left d-flex flex-wrap"><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalDeposit">Deposit</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalWithdraw">Withdraw</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalTransfer">Transfer</a><a class="text-green pr-3" href="./all.html">Transaction History</a><a class="text-green pr-3" href="./buy.html">Trade</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="accountExchange">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <table class="table-plugin">
+                          <thead>
+                            <tr>
+                              <th class="text-left">Coin</th>
+                              <th class="text-left">Available</th>
+                              <th class="text-left">Frozen</th>
+                              <th class="text-left">Operation</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="text-left"><a class="text-blue font-bold" href="./buy.html">BTC</a></td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left d-flex flex-wrap"><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalDeposit">Deposit</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalWithdraw">Withdraw</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalTransfer">Transfer</a><a class="text-green pr-3" href="./all.html">Transaction History</a><a class="text-green pr-3" href="./exchange.html">Trade</a></td>
+                            </tr>
+                            <tr>
+                              <td class="text-left"><a class="text-blue font-bold" href="./buy.html">ETH</a></td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left d-flex flex-wrap"><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalDeposit">Deposit</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalWithdraw">Withdraw</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalTransfer">Transfer</a><a class="text-green pr-3" href="./all.html">Transaction History</a><a class="text-green pr-3" href="./exchange.html">Trade</a></td>
+                            </tr>
+                            <tr>
+                              <td class="text-left"><a class="text-blue font-bold" href="./buy.html">BCASH</a></td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left d-flex flex-wrap"><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalDeposit">Deposit</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalWithdraw">Withdraw</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalTransfer">Transfer</a><a class="text-green pr-3" href="./all.html">Transaction History</a><a class="text-green pr-3" href="./exchange.html">Trade</a></td>
+                            </tr>
+                            <tr>
+                              <td class="text-left"><a class="text-blue font-bold" href="./buy.html">LTC</a></td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left d-flex flex-wrap"><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalDeposit">Deposit</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalWithdraw">Withdraw</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalTransfer">Transfer</a><a class="text-green pr-3" href="./all.html">Transaction History</a><a class="text-green pr-3" href="./exchange.html">Trade</a></td>
+                            </tr>
+                            <tr>
+                              <td class="text-left"><a class="text-blue font-bold" href="./buy.html">XMR</a></td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left">0.00000000</td>
+                              <td class="text-left d-flex flex-wrap"><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalDeposit">Deposit</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalWithdraw">Withdraw</a><a class="text-green pr-3" href="#" data-toggle="modal" data-target="#modalTransfer">Transfer</a><a class="text-green pr-3" href="./all.html">Transaction History</a><a class="text-green pr-3" href="./exchange.html">Trade</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="modal fade" id="modalTransfer" tabindex="-1" role="dialog" aria-labelledby="modalTransferLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content transfer-container">
+                      <div class="modal-header">
+                        <h5 class="modal-title w-100 text-center text-blue" id="modalTransferLabel">Transfer</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col py-3">
+                              <form class="form-group needs-validation" action="#" novalidate="novalidate">
+                                <div class="form-group">
+                                  <label for="transferAmount"><span class="text-red">*</span>Transfer Amount</label>
+                                  <input class="form-control" id="transferAmount" type="text" aria-describedby="transferAmount" placeholder="Please enter the withdraw address" required="required"/>
+                                  <div class="invalid-feedback">Incorrect transfer amount</div>
+                                </div>
+                                <div class="form-group text-right">
+                                  <button class="btn btn-lg btn-gradient-orange" type="submit">Transfer</button>
+                                </div>
+                              </form>
+                              <div class="mt-3 d-block info-box">Note:<br/>- Transferring assets between your OTC account and your Exchange account is free and takes place in real time.</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="modal fade" id="modalWithdraw" tabindex="-1" role="dialog" aria-labelledby="modalWithdrawLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content withdraw-container">
+                      <div class="modal-header">
+                        <h5 class="modal-title w-100 text-center text-blue" id="modalWithdrawLabel">Withdraw</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col py-3">
+                              <form class="form-group needs-validation" action="#" novalidate="novalidate">
+                                <div class="form-group">
+                                  <div class="d-flex justify-content-between">
+                                    <label for="withdrawAddress"><span class="text-red">*</span>Withdraw address</label><a class="text-blue" id="withdrawalAddressToggle" href="#" data-toggle="modal">Withdraw Address Management</a>
+                                  </div>
+                                  <input class="form-control" id="withdrawAddress" type="text" aria-describedby="withdrawAddress" placeholder="Please enter the withdraw address" required="required"/>
+                                  <div class="invalid-feedback">Incorrect withdraw address</div>
+                                </div>
+                                <div class="form-group">
+                                  <label>Withdraw amount</label>
+                                  <input class="form-control" type="number" required="required"/>
+                                  <div class="invalid-feedback">Incorrect withdraw amount</div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="paymentPassword"><span class="text-red">*</span>Payment password</label>
+                                  <input class="form-control" id="paymentPassword" type="password" aria-describedby="paymentPassword" placeholder="Please enter payment password" required="required"/>
+                                  <div class="invalid-feedback">Incorrect payment password</div>
+                                </div>
+                                <div class="form-group">
+                                  <label>Notes</label>
+                                  <input class="form-control" type="number" placeholder="Please enter a withdrawal note"/>
+                                </div>
+                                <div class="form-group text-right">
+                                  <button class="btn btn-lg btn-gradient-orange" type="submit">Confirm withdrawal</button>
+                                </div>
+                              </form>
+                              <div class="mt-3 d-block info-box">Note:<br/>- The minimum withdrawal amount is 0.01 BTC.<br/>- The network transfer fee is 0.0005 BTC. The network transfer fee may be adjusted to account for current network congestion.<br/>- BTC wallet addresses can only receive BTC assets. Any non-BTC assets sent to a BTC wallet address will not be recovered.<br/>- CoinCola supports real-time, internal transfers. Transfers to other CoinCola users will be charged at the same rate as regular withdrawals.</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="modal fade" id="modalWithdrawAddress" tabindex="-1" role="dialog" aria-labelledby="modalWithdrawAddressLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content withdraw-address-container">
+                      <div class="modal-header">
+                        <h5 class="modal-title w-100 text-center text-blue" id="modalWithdrawAddressLabel">Withdraw Address</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col py-3">
+                              <form class="form-group needs-validation" action="#" novalidate="novalidate">
+                                <div class="form-group">
+                                  <label for="withdrawAddress">Withdraw address</label>
+                                  <input class="form-control" id="withdrawAddress" type="text" aria-describedby="withdrawAddress" placeholder="Please input address" required="required"/>
+                                  <div class="invalid-feedback">Invalid withdraw address</div>
+                                </div>
+                                <div class="form-group">
+                                  <label>Remark</label>
+                                  <input class="form-control" type="text" placeholder="Please input note" required="required"/>
+                                  <div class="invalid-feedback">Invalid note</div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="paymentPassword"><span class="text-red">*</span>Payment password</label>
+                                  <input class="form-control" id="paymentPassword" type="password" aria-describedby="paymentPassword" placeholder="Please input password" required="required"/>
+                                  <div class="invalid-feedback">Invalid fund password</div>
+                                </div>
+                                <div class="form-group text-right">
+                                  <button class="btn btn-lg btn-gradient-orange" type="submit">Add</button>
+                                </div>
+                              </form>
+                              <h5 class="text-center">Address list</h5>
+                              <table class="table table-sm">
+                                <thead>
+                                  <tr>
+                                    <th>Withdraw Address</th>
+                                    <th>Remark</th>
+                                    <th>Operation</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td class="text-center" colspan="3">No data</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="modal fade" id="modalDeposit" tabindex="-1" role="dialog" aria-labelledby="modalDepositLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content deposit-container">
+                      <div class="modal-header">
+                        <h5 class="modal-title w-100 text-center text-blue" id="modalDepositLabel">Deposit</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col py-3">
+                              <p>Deposit Address:</p>
+                              <div class="font-bold"><span class="highlight-grey p-2 d-inline-block">136VgrQyE5MomKspViUY1oRuirpKepqWqp</span>
+                                <div class="qr-code ml-2"><img src="../assets/qr_code.png" alt=""/>
+                                  <div class="qr-code-lg"><img src="../assets/qr_code-lg.png" alt=""/></div>
+                                </div>
+                              </div>
+                              <div class="mt-3 d-block info-box">Note:<br/>- BTC addresses can only receive BTC assets. Any non-BTC assets sent to a BTC address will not be recovered.<br/>- For deposits to a BTC address, 1 network confirmation(s) is/are required before arrival. <br/>- The minimum deposit amount 0.003 BTC . CoinCola will not process BTC deposit requests less than that amount.</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="container-fluid bg-footer py-4">
+        <div class="container footer">
+          <div class="row justify-content-between">
+            <div class="cell">
+              <h6 class="font-bold pt-2">BCASH EXCHANGE</h6>
+              <div class="pb-2"><i class="fas fa-envelope pr-1"></i>Email: <a href="mailto:support@bcashpay.org">Support@BcashPay.org</a></div>
+              <div class="pb-2"><i class="fas fa-comments pr-1"></i><a href="#">Online support</a></div>
+              <div class="pb-4"><i class="fas fa-question-circle pr-1"></i><a href="./faq.html">Frequently Asked Questions</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">INTRODUCE</h6>
+              <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="./about.html">About us</a></div>
+              <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Fees</a></div>
+              <div class="pb-4"><i class="fas fa-chevron-circle-right pr-1"></i><a href="./policy_term.html">Policies and Terms</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">SOCIAL MEDIA</h6>
+              <div class="pb-2"><i class="fab fa-facebook-square pr-1"></i><a href="#">Facebook</a></div>
+              <div class="pb-2"><i class="fab fa-telegram pr-1"></i><a href="#">Telegram</a></div>
+              <div class="pb-4"><i class="fab fa-twitter pr-1"></i><a href="#">Twitter</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">SIGN UP FOR THE NEWSLETTER</h6>
+              <div class="pb-2">Please register to receive latest news from <b>BCASH Exchange</b></div>
+              <div class="input-group mb-3">
+                <input class="form-control" type="email" placeholder="Enter your mail" aria-label="Enter your mail" aria-describedby="button-addon2"/>
+                <div class="input-group-append">
+                  <button class="btn btn-gradient-orange" type="button" id="button-addon2">Agree</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bg-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col py-2">Designed by BCASH EXCHANGE. All rights reserved. © 2018</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/addons/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/addons/datatables.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                      if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                      }
+                      form.classList.add('was-validated');
+                  }, false);
+              });
+          }, false);
+      })();
+    </script>
+    <script>
+      $(function(){
+          var table = $('.table-plugin').DataTable({
+              searching: false,
+              ordering:  false,
+              info: false,
+              paging: false,
+              bLengthChange: false,
+              autoWidth: true,
+              scrollX: true
+          });
+      
+          $('#withdrawalAddressToggle').on('click',function(){
+              $('#modalWithdrawAddress').modal({show: true, focus: true});
+              $('#modalWithdraw').modal('hide');
+              $('#modalWithdrawAddress').on('hidden.bs.modal', function (e) {
+                  $('#modalWithdraw').modal('show');  
+              });
+          });
+      });
+    </script>
+  </body>
+</html>

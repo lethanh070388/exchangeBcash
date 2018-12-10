@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Layout</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+    <link href="../css/addons/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+    <link href="../css/addons/datatables.min.css" rel="stylesheet"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/app.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="wrapper main-wrapper-bg">
+      <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar">
+        <div class="container"><a class="navbar-brand" href="./index.html"><img src="../assets/logo.png" alt=""/></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav w-100">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBTC" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BTC</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownBTC"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownETH" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ETH</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownETH"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBCash" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BCASH</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownBCash"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">LTC</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">XMR</a></li>
+              <li class="nav-item dropdown ml-auto"><a class="nav-link dropdown-toggle" href="./order.html" id="navbarDropdownOrder" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="far fa-file-alt pr-1"></i>Order</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownOrder"><a class="dropdown-item" href="./order.html">OTC Orders</a><a class="dropdown-item" href="./order.html">Exchange Orders</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./wallet.html" id="navbarDropdownWallet" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-wallet pr-1"></i>Assets</a>
+                <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdownWallet"><a class="dropdown-item" href="./wallet.html"> <span class="text-blue font-bold">OTC Account</span>
+                    <table class="table table-sm mt-2">
+                      <thead>
+                        <tr>
+                          <th>Coin</th>
+                          <th>Available</th>
+                          <th>Frozen</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>ETH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>BCASH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>LTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>XMR</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                      </tbody>
+                    </table><span class="text-blue font-bold">Exchange Account</span>
+                    <table class="table table-sm mt-2">
+                      <thead>
+                        <tr>
+                          <th>Coin</th>
+                          <th>Available</th>
+                          <th>Frozen</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>ETH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>BCASH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>LTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>XMR</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                      </tbody>
+                    </table></a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./user_profile.html" id="navbarDropdownUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-user-circle pr-1"></i>User</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownUser"><a class="dropdown-item" href="./user_profile.html">User Center</a><a class="dropdown-item" href="#">Advertisements</a><a class="dropdown-item" href="#">Invite friends</a><a class="dropdown-item" href="./index.html">Log out</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">| Lang</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">English</a><a class="dropdown-item" href="#">Vietnamese</a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <main class="main-content">   
+        <div class="content-wrapper">
+          <aside class="sidebar">
+            <div class="sidebar_item sidebar_heading">OTC</div>
+            <div class="sidebar_item"><a href="./buy.html">Buy</a></div>
+            <div class="sidebar_item"><a href="./sell.html">Sell</a></div>
+            <div class="sidebar_item active"><a href="#">Manage</a></div>
+            <div class="sidebar_item"><a href="#">My ads</a></div>
+            <div class="sidebar_item"><a href="#">Trust</a></div>
+            <hr class="divine"/>
+            <div class="sidebar_item"><a href="./new_ad.html">Adveritise</a></div>
+          </aside>
+          <div class="container-fluid bg-white mx-3 content">
+            <div class="row">
+              <div class="col">
+                <ul class="nav nav-tabs custom-tabs my-3" role="tablist">
+                  <li class="nav-item mr-3"><a class="active px-2" data-toggle="tab" href="#buyBTC">BTC</a></li>
+                  <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#buyETH">ETH</a></li>
+                  <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#buyBcash">BCASH</a></li>
+                  <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#buyLTC">LTC</a></li>
+                  <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#buyXMR">XMR                        </a></li>
+                </ul>
+                <div class="row no-gutters">
+                  <div class="col-sm-7">
+                    <h4>Buy Bitcoin in United States </h4>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="input-group">
+                      <input class="form-control" type="text" placeholder="Search..."/>
+                      <div class="input-group-append">
+                        <button class="btn"><i class="fas fa-search"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-content mb-5">
+                  <div class="container tab-pane active p-0" id="buyBTC">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <table class="table-plugin">
+                          <thead>
+                            <tr>
+                              <th>Username</th>
+                              <th>Payment method</th>
+                              <th>Limits</th>
+                              <th>Price</th>
+                              <th><span>Trade </span><span class="badge badge-danger">0 FEE</span></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="d-flex flex-nowrap"><img class="coins-img mr-2" src="../assets/coins/BTC.png" alt=""/>
+                                <div class="d-flex flex-column"><span>djula</span><small>Trades 91 | Rating 100%</small></div>
+                              </td>
+                              <td><img src="../assets/payments/PAYPAL.png" alt=""/></td>
+                              <td>150-500 USD</td>
+                              <td>
+                                <h5 class="mb-0">7285.07USD</h5>
+                              </td>
+                              <td><a class="btn btn-gradient-blue" href="./buyFrom.html">Buy BTC</a></td>
+                            </tr>
+                            <tr>
+                              <td class="d-flex flex-nowrap"><img class="coins-img mr-2" src="../assets/coins/ETH.png" alt=""/>
+                                <div class="d-flex flex-column"><span>bszl</span><small>Trades 33 | Rating 100%</small></div>
+                              </td>
+                              <td><img src="../assets/payments/PAYPAL.png" alt=""/></td>
+                              <td>50-200 USD</td>
+                              <td>
+                                <h5 class="mb-0">120000USD</h5>
+                              </td>
+                              <td><a class="btn btn-gradient-blue" href="./buyFrom.html">Buy BTC</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="buyETH">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <table class="table-plugin">
+                          <thead>
+                            <tr>
+                              <th>Username</th>
+                              <th>Payment method</th>
+                              <th>Limits</th>
+                              <th>Price</th>
+                              <th><span>Trade </span><span class="badge badge-danger">0 FEE</span></th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="buyBcash">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <table class="table-plugin">
+                          <thead>
+                            <tr>
+                              <th>Username</th>
+                              <th>Payment method</th>
+                              <th>Limits</th>
+                              <th>Price</th>
+                              <th><span>Trade </span><span class="badge badge-danger">0 FEE</span></th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="buyLTC">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <table class="table-plugin">
+                          <thead>
+                            <tr>
+                              <th>Username</th>
+                              <th>Payment method</th>
+                              <th>Limits</th>
+                              <th>Price</th>
+                              <th><span>Trade </span><span class="badge badge-danger">0 FEE</span></th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="buyXMR">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <table class="table-plugin">
+                          <thead>
+                            <tr>
+                              <th>Username</th>
+                              <th>Payment method</th>
+                              <th>Limits</th>
+                              <th>Price</th>
+                              <th><span>Trade </span><span class="badge badge-danger">0 FEE</span></th>
+                            </tr>
+                          </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="container-fluid bg-footer py-4">
+        <div class="container footer">
+          <div class="row justify-content-between">
+            <div class="cell">
+              <h6 class="font-bold pt-2">BCASH EXCHANGE</h6>
+              <div class="pb-2"><i class="fas fa-envelope pr-1"></i>Email: <a href="mailto:support@bcashpay.org">Support@BcashPay.org</a></div>
+              <div class="pb-2"><i class="fas fa-comments pr-1"></i><a href="#">Online support</a></div>
+              <div class="pb-4"><i class="fas fa-question-circle pr-1"></i><a href="./faq.html">Frequently Asked Questions</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">INTRODUCE</h6>
+              <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="./about.html">About us</a></div>
+              <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Fees</a></div>
+              <div class="pb-4"><i class="fas fa-chevron-circle-right pr-1"></i><a href="./policy_term.html">Policies and Terms</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">SOCIAL MEDIA</h6>
+              <div class="pb-2"><i class="fab fa-facebook-square pr-1"></i><a href="#">Facebook</a></div>
+              <div class="pb-2"><i class="fab fa-telegram pr-1"></i><a href="#">Telegram</a></div>
+              <div class="pb-4"><i class="fab fa-twitter pr-1"></i><a href="#">Twitter</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">SIGN UP FOR THE NEWSLETTER</h6>
+              <div class="pb-2">Please register to receive latest news from <b>BCASH Exchange</b></div>
+              <div class="input-group mb-3">
+                <input class="form-control" type="email" placeholder="Enter your mail" aria-label="Enter your mail" aria-describedby="button-addon2"/>
+                <div class="input-group-append">
+                  <button class="btn btn-gradient-orange" type="button" id="button-addon2">Agree</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bg-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col py-2">Designed by BCASH EXCHANGE. All rights reserved. © 2018</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/addons/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/addons/datatables.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                      if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                      }
+                      form.classList.add('was-validated');
+                  }, false);
+              });
+          }, false);
+      })();
+    </script>
+    <script>
+      $(function(){
+          var table = $('.table-plugin').DataTable({
+              searching: false,
+              ordering:  false,
+              info: false,
+              paging: false,
+              bLengthChange: false,
+              autoWidth: true,
+              scrollX: true
+          });
+      });
+    </script>
+  </body>
+</html>

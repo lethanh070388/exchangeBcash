@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Layout</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+    <link href="../css/addons/datatables.min.css" rel="stylesheet"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/app.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="wrapper main-wrapper-bg">
+      <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar">
+        <div class="container"><a class="navbar-brand" href="./index.html"><img src="../assets/logo.png" alt=""/></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav w-100">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBTC" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BTC</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownBTC"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownETH" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ETH</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownETH"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBCash" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BCASH</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownBCash"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">LTC</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">XMR</a></li>
+              <li class="nav-item dropdown ml-auto"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lang</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">English</a><a class="dropdown-item" href="#">Vietnamese</a></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="./login.html">Log in</a></li>
+              <li class="nav-item"><a class="nav-link btn btn-gradient-orange btn-glow" href="./register.html">Sign up</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <main class="main-content">   
+        <div class="register container-fluid mt-5 mb-3">
+          <div class="row pt-5">
+            <div class="col">
+              <h1 class="main-title text-center">Register</h1>
+            </div>
+          </div>
+          <div class="row market-wrapper mb-5">
+            <div class="col">
+              <ul class="nav nav-tabs my-3" role="tablist">
+                <li class="nav-item mx-3"><a class="btn btn-lg active btn-gradient-blue btn-glow" data-toggle="tab" href="#registerByPhone">Register by phone</a></li>
+                <li class="nav-item mx-3"><a class="btn btn-lg btn-gradient-blue btn-glow" data-toggle="tab" href="#registerByMail">Register by mail</a></li>
+              </ul>
+              <div class="tab-content mb-5">
+                <div class="container tab-pane active" id="registerByPhone">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                      <form class="custom-form p-4 bg-white-grey form-register needs-validation" action="#" novalidate="novalidate">
+                        <div class="form-group">
+                          <select class="form-control">
+                            <option value="1" selected="selected">United State</option>
+                            <option value="84">Vietnam</option>
+                            <option value="86">China</option>
+                            <option value="60">Malaysia</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="text" placeholder="Phone number" autocomplete="off" required="required"/>
+                          <div class="invalid-feedback">Invalid phone number</div>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="password" placeholder="Password (6-64 numbers, letters or symbols)" required="required"/>
+                          <div class="invalid-feedback">Invalid password</div>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="password" placeholder="Confirm password" required="required"/>
+                          <div class="invalid-feedback">Invalid password</div>
+                        </div>
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="text" placeholder="Enter image text or result" required="required"/>
+                          <div class="input-group-append"><span class="input-group-text element-append">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="28" viewBox="0 0 120 40">
+                                <path d="M14 31 C47 20,49 24,109 39" stroke="#777" fill="none"></path>
+                                <path d="M8 8 C79 3,54 25,100 1" stroke="#222" fill="none"></path>
+                                <path fill="#333" d="M57.76 32.41L57.75 32.40L57.67 32.32Q57.20 32.41 56.61 32.44L56.63 32.46L56.61 32.44Q55.89 32.41 55.30 32.41L55.38 32.49L55.43 32.53Q55.68 29.45 55.68 26.52L55.66 26.50L55.81 26.65Q54.27 26.71 53.49 26.71L53.35 26.57L53.31 26.53Q52.68 26.62 51.11 26.55L51.13 26.57L51.04 26.48Q51.11 26.29 50.95 24.17L51.03 24.25L50.92 24.14Q53.22 24.71 55.77 24.71L55.65 24.59L55.70 24.65Q55.55 20.93 55.19 18.72L55.21 18.74L55.12 18.65Q55.88 18.82 56.56 18.82L56.58 18.84L57.87 18.72L57.89 18.74Q57.66 22.37 57.66 24.58L57.68 24.60L57.69 24.61Q59.57 24.63 62.31 24.33L62.35 24.38L62.23 24.26Q62.29 25.56 62.29 26.60L62.21 26.53L62.30 26.61Q61.98 26.52 61.30 26.56L61.34 26.59L61.32 26.58Q60.51 26.61 59.98 26.64L59.95 26.61L59.92 26.58Q59.90 26.57 57.62 26.57L57.71 26.66L57.58 29.46L57.72 29.60Q57.74 31.02 57.83 32.49ZM62.76 24.00L62.73 23.97L62.69 23.93Q61.10 24.24 59.50 24.30L59.42 24.22L59.50 24.30Q59.66 21.56 60.02 19.96L60.12 20.06L60.07 20.01Q59.35 19.94 58.14 20.07L58.18 20.11L58.45 18.46L58.30 18.30Q56.21 18.46 54.77 18.36L54.62 18.21L54.61 18.20Q55.30 21.08 55.46 24.40L55.43 24.38L55.32 24.27Q53.77 24.18 50.60 23.66L50.61 23.67L50.71 23.77Q50.82 24.66 50.82 26.91L50.87 26.96L52.10 26.89L52.09 26.87Q52.26 27.67 52.13 28.87L52.09 28.84L55.38 28.50L55.48 28.60Q55.29 31.32 55.03 32.88L54.94 32.80L55.04 32.90Q55.55 32.75 56.76 32.65L56.81 32.70L56.80 32.70Q56.88 33.36 56.85 34.50L56.78 34.43L56.81 34.46Q57.22 34.43 60.32 34.56L60.42 34.65L60.29 34.52Q59.50 31.87 59.30 28.48L59.30 28.47L59.40 28.57Q62.23 28.63 64.02 28.95L64.01 28.95L63.98 28.91Q63.85 28.13 63.85 27.32L63.76 27.22L63.85 25.68L63.92 25.76Q63.59 25.62 63.13 25.65L63.13 25.65L62.46 25.66L62.50 25.70Q62.48 25.00 62.58 23.82Z"></path>
+                                <path d="M4 9 C52 1,46 13,118 16" stroke="#888" fill="none"></path>
+                                <path d="M17 3 C63 32,66 5,100 30" stroke="#666" fill="none"></path>
+                                <path fill="#222" d="M92.73 31.00L92.71 30.99L92.79 31.07Q93.06 31.92 93.51 33.65L93.46 33.59L93.49 33.62Q89.82 32.43 85.87 32.66L85.85 32.64L85.95 32.74Q81.99 32.92 78.56 34.62L78.60 34.66L78.52 34.57Q78.73 34.00 78.76 34.06L78.90 34.20L78.79 34.09Q82.02 30.74 85.38 26.95L85.32 26.89L85.46 27.02Q89.20 22.71 90.21 18.69L90.12 18.60L90.13 18.62Q90.58 17.17 89.49 16.16L89.40 16.07L89.52 16.19Q88.30 15.05 86.76 15.18L86.91 15.32L86.79 15.21Q86.59 15.27 86.30 15.27L86.31 15.28L86.34 15.31Q85.01 15.28 83.93 16.07L83.87 16.00L83.97 16.11Q82.68 17.10 82.88 19.39L83.01 19.52L82.88 19.39Q81.42 19.17 80.38 18.78L80.31 18.71L80.30 18.71Q80.14 17.49 80.07 16.25L80.21 16.39L80.08 16.26Q80.08 14.93 80.60 13.95L80.65 13.99L80.59 13.93Q82.12 12.76 84.99 12.76L85.00 12.76L86.52 12.78L86.56 12.82Q88.54 12.87 89.35 12.97L89.24 12.86L89.37 12.99Q92.93 13.19 93.16 15.28L93.35 15.47L93.27 15.38Q93.40 15.95 93.34 16.63L93.26 16.55L93.23 16.52Q93.19 17.07 93.06 17.66L93.08 17.67L93.11 17.71Q91.77 24.73 85.28 30.60L85.09 30.41L85.20 30.52Q86.45 30.43 87.62 30.43L87.61 30.42L87.49 30.30Q90.29 30.32 92.74 31.01ZM92.22 13.14L92.37 13.28L92.35 13.26Q90.91 12.63 89.44 12.57L89.54 12.67L86.45 12.35L86.58 12.48Q82.68 12.17 80.79 13.12L80.78 13.11L80.82 13.16Q79.82 14.24 79.82 16.00L79.90 16.08L79.99 16.18Q79.85 16.62 80.11 19.03L80.28 19.20L80.29 19.21Q80.75 19.41 81.76 19.67L81.75 19.66L81.58 20.37L81.71 20.50Q81.65 20.87 81.72 21.33L81.78 21.39L81.72 21.33Q82.85 21.48 84.97 21.68L84.98 21.68L84.83 21.53Q84.91 21.32 84.91 21.03L84.93 21.05L84.82 20.94Q84.94 19.49 85.98 18.33L85.91 18.25L85.86 18.21Q86.91 17.06 88.45 17.16L88.43 17.14L88.46 17.17Q89.12 17.21 89.77 17.34L89.83 17.39L89.80 17.37Q89.82 17.62 89.88 17.97L89.89 17.98L90.01 18.10Q89.89 18.31 89.83 18.60L89.83 18.61L89.91 18.69Q88.79 22.72 85.00 26.86L84.99 26.85L84.97 26.83Q83.20 28.82 78.54 34.01L78.58 34.04L78.54 34.01Q78.37 34.72 78.08 35.21L78.14 35.27L78.11 35.24Q79.51 34.52 80.82 34.06L80.70 33.95L80.78 34.03Q80.10 34.46 79.28 35.73L79.26 35.71L79.25 35.70Q79.16 36.00 79.07 36.30L79.11 36.34L79.25 36.48Q83.41 34.70 88.11 34.87L87.93 34.69L88.04 34.79Q92.91 34.93 96.82 36.96L96.86 36.99L95.94 35.09L95.99 35.14Q95.39 33.96 95.16 33.27L95.26 33.37L95.26 33.37Q94.65 33.02 93.61 32.66L93.53 32.58L93.52 32.58Q93.30 31.87 92.98 30.69L92.99 30.70L92.95 30.67Q91.25 30.37 89.29 30.20L89.19 30.10L89.23 30.14Q93.26 26.25 94.57 19.17L94.47 19.07L94.70 16.65L94.70 16.65Q94.58 15.07 93.53 14.48L93.51 14.45L93.49 14.47L93.44 14.42Q93.43 14.37 93.37 14.37L93.45 14.46L93.50 14.51Q93.18 13.67 92.23 13.14Z"></path>
+                                <path d="M13 23 C59 15,63 2,106 7" stroke="#888" fill="none"></path>
+                                <path d="M15 7 C40 4,72 12,109 6" stroke="#333" fill="none"></path>
+                                <path d="M7 30 C48 32,73 8,110 23" stroke="#333" fill="none"></path>
+                                <path d="M14 11 C39 37,69 8,111 36" stroke="#666" fill="none"></path>
+                                <path fill="#333" d="M26.93 23.51L26.92 23.50L26.95 23.54Q25.50 23.69 24.46 24.83L24.36 24.73L24.36 24.73Q23.26 25.81 23.13 27.45L23.23 27.55L23.12 27.44Q23.11 29.42 24.15 30.28L24.02 30.15L23.99 30.12Q25.07 31.02 26.89 30.95L27.00 31.05L26.99 31.05Q28.84 30.77 29.65 29.96L29.72 30.03L29.81 30.12Q30.65 28.83 30.55 27.27L30.63 27.34L30.44 27.16Q30.44 25.65 29.51 24.62L29.57 24.69L29.42 24.54Q28.51 23.53 26.95 23.53ZM26.93 15.45L27.04 15.57L27.03 15.55Q25.68 15.31 24.54 15.74L24.68 15.89L24.62 15.82Q23.60 16.60 23.80 18.19L23.79 18.19L23.66 18.06Q24.11 21.28 26.98 21.28L27.03 21.33L26.98 21.28Q28.44 21.57 29.29 20.59L29.21 20.51L29.12 20.42Q30.02 19.49 30.05 18.15L30.11 18.21L29.99 18.10Q30.16 16.70 29.54 16.17L29.53 16.16L29.43 16.06Q28.17 15.52 27.06 15.59ZM26.79 33.17L26.82 33.20L24.12 33.11L24.16 33.14Q22.91 33.20 21.77 32.45L21.72 32.41L21.74 32.42Q20.50 31.38 20.64 28.94L20.71 29.01L20.62 28.92Q21.10 23.14 24.20 22.29L24.22 22.31L24.18 22.26Q22.17 21.43 21.03 16.83L21.02 16.82L21.03 16.84Q20.69 15.58 20.75 14.89L20.83 14.97L20.87 15.01Q21.10 13.15 24.27 13.12L24.21 13.06L24.21 13.06Q27.94 13.11 29.18 13.27L29.00 13.09L29.18 13.26Q32.30 13.55 32.69 15.28L32.73 15.32L32.77 15.36Q32.98 15.99 32.98 16.31L32.79 16.13L32.94 16.27Q32.79 16.71 32.62 17.23L32.74 17.35L32.76 17.37Q32.27 21.02 29.76 22.33L29.64 22.21L29.72 22.29Q32.73 22.99 33.16 27.52L33.02 27.39L33.17 27.54Q33.01 27.50 33.04 28.61L33.18 28.75L33.17 28.75Q33.29 31.15 31.92 32.06L31.74 31.88L31.79 31.93Q30.73 32.80 26.81 33.19ZM28.70 35.11L28.69 35.10L31.55 35.15L31.66 35.27Q33.05 35.24 34.35 34.62L34.42 34.69L34.44 34.72Q35.37 34.04 35.43 32.44L35.35 32.36L35.33 32.34Q35.34 31.37 35.01 29.71L35.00 29.69L35.15 29.84Q34.40 25.90 32.61 24.30L32.49 24.18L32.26 23.79L32.13 23.59L31.99 23.35L32.14 23.51Q33.37 22.15 34.15 18.60L34.28 18.73L34.33 18.78Q34.19 18.31 34.25 17.59L34.26 17.60L34.41 17.75Q34.42 17.10 34.35 16.58L34.28 16.51L34.40 16.63Q34.16 15.28 33.15 14.86L33.19 14.90L33.26 14.93L33.05 14.79L33.07 14.81Q32.79 14.14 31.78 13.45L31.84 13.51L31.76 13.40L31.90 13.54Q30.20 12.95 26.71 12.79L26.58 12.66L26.67 12.75Q25.33 12.65 24.15 12.74L24.10 12.70L24.22 12.81Q23.54 12.85 22.43 12.98L22.31 12.86L22.33 12.88Q20.70 13.24 20.50 14.64L20.58 14.72L20.46 14.60Q20.40 14.99 20.43 15.68L20.43 15.68L20.39 15.63Q20.51 16.11 21.00 18.14L21.10 18.24L21.08 18.22Q21.69 20.92 23.20 22.07L23.27 22.14L23.40 22.27L23.27 22.14Q20.85 23.21 20.39 27.65L20.51 27.76L20.39 27.65Q20.25 29.56 20.25 30.34L20.26 30.36L20.30 30.39Q20.39 31.95 21.40 32.73L21.48 32.81L21.30 32.63Q21.53 32.84 21.76 33.00L21.63 32.87L21.67 32.90Q22.65 34.96 28.75 35.16ZM28.37 25.57L28.45 25.65L28.45 25.65Q29.27 25.63 30.02 26.02L29.98 25.98L29.92 25.92Q30.17 26.69 30.14 27.15L30.15 27.16L30.33 27.34Q30.18 27.41 30.18 27.67L30.22 27.72L30.20 27.70Q30.29 29.81 28.33 30.53L28.30 30.50L28.40 30.60Q27.64 30.79 26.96 30.69L27.02 30.75L26.84 30.57Q26.06 30.84 25.08 30.45L24.98 30.34L24.93 30.29Q24.70 29.74 24.77 28.89L24.79 28.91L24.88 29.00Q24.91 27.53 25.94 26.49L25.93 26.48L26.08 26.63Q27.13 25.61 28.50 25.71ZM28.63 17.51L28.63 17.52L28.52 17.40Q29.24 17.34 29.70 17.47L29.69 17.47L29.82 18.28L29.82 18.28Q29.80 19.47 29.02 20.34L28.92 20.24L28.93 20.24Q28.14 21.10 26.97 20.94L27.02 20.99L27.03 21.01Q26.19 21.01 25.83 20.82L25.79 20.78L25.77 20.76Q25.85 20.64 25.75 20.05L25.76 20.06L25.70 20.01Q25.38 18.70 26.42 17.98L26.39 17.95L26.50 18.06Q27.38 17.44 28.59 17.47Z"></path>
+                              </svg></span></div>
+                          <div class="invalid-feedback">Invalid Code</div>
+                        </div>
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="text" placeholder="Enter SMS verification code" required="required"/>
+                          <div class="input-group-append">
+                            <button class="btn btn-gradient-blue element-append" type="button">Send</button>
+                          </div>
+                          <div class="invalid-feedback">Invalid Code</div>
+                        </div>
+                        <div class="form-group form-check">
+                          <input class="form-check-input" type="checkbox"/>
+                          <label class="form-check-label"><small>I agree with CoinCola's <a href="#">Terms of Service </a>and <a href="#">Privacy Policy</a></small></label>
+                        </div>
+                        <div class="form-group text-right">
+                          <button class="btn btn-lg btn-gradient-orange" type="submit">Sign up</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="container tab-pane fade" id="registerByMail">
+                  <div class="row d-flex justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                      <form class="custom-form p-4 bg-white-grey form-register needs-validation" action="#" novalidate="novalidate">
+                        <div class="form-group">
+                          <select class="form-control">
+                            <option value="1" selected="selected">United State</option>
+                            <option value="84">Vietnam</option>
+                            <option value="86">China</option>
+                            <option value="60">Malaysia</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="email" placeholder="Email" autocomplete="off" required="required"/>
+                          <div class="invalid-feedback">Invalid email</div>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="password" placeholder="Password (6-64 numbers, letters or symbols)" required="required"/>
+                          <div class="invalid-feedback">Invalid password</div>
+                        </div>
+                        <div class="form-group">
+                          <input class="form-control" type="password" placeholder="Confirm password" required="required"/>
+                          <div class="invalid-feedback">Invalid password</div>
+                        </div>
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="text" placeholder="Enter image text or result" required="required"/>
+                          <div class="input-group-append"><span class="input-group-text element-append">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="80" height="28" viewBox="0 0 120 40">
+                                <path d="M14 31 C47 20,49 24,109 39" stroke="#777" fill="none"></path>
+                                <path d="M8 8 C79 3,54 25,100 1" stroke="#222" fill="none"></path>
+                                <path fill="#333" d="M57.76 32.41L57.75 32.40L57.67 32.32Q57.20 32.41 56.61 32.44L56.63 32.46L56.61 32.44Q55.89 32.41 55.30 32.41L55.38 32.49L55.43 32.53Q55.68 29.45 55.68 26.52L55.66 26.50L55.81 26.65Q54.27 26.71 53.49 26.71L53.35 26.57L53.31 26.53Q52.68 26.62 51.11 26.55L51.13 26.57L51.04 26.48Q51.11 26.29 50.95 24.17L51.03 24.25L50.92 24.14Q53.22 24.71 55.77 24.71L55.65 24.59L55.70 24.65Q55.55 20.93 55.19 18.72L55.21 18.74L55.12 18.65Q55.88 18.82 56.56 18.82L56.58 18.84L57.87 18.72L57.89 18.74Q57.66 22.37 57.66 24.58L57.68 24.60L57.69 24.61Q59.57 24.63 62.31 24.33L62.35 24.38L62.23 24.26Q62.29 25.56 62.29 26.60L62.21 26.53L62.30 26.61Q61.98 26.52 61.30 26.56L61.34 26.59L61.32 26.58Q60.51 26.61 59.98 26.64L59.95 26.61L59.92 26.58Q59.90 26.57 57.62 26.57L57.71 26.66L57.58 29.46L57.72 29.60Q57.74 31.02 57.83 32.49ZM62.76 24.00L62.73 23.97L62.69 23.93Q61.10 24.24 59.50 24.30L59.42 24.22L59.50 24.30Q59.66 21.56 60.02 19.96L60.12 20.06L60.07 20.01Q59.35 19.94 58.14 20.07L58.18 20.11L58.45 18.46L58.30 18.30Q56.21 18.46 54.77 18.36L54.62 18.21L54.61 18.20Q55.30 21.08 55.46 24.40L55.43 24.38L55.32 24.27Q53.77 24.18 50.60 23.66L50.61 23.67L50.71 23.77Q50.82 24.66 50.82 26.91L50.87 26.96L52.10 26.89L52.09 26.87Q52.26 27.67 52.13 28.87L52.09 28.84L55.38 28.50L55.48 28.60Q55.29 31.32 55.03 32.88L54.94 32.80L55.04 32.90Q55.55 32.75 56.76 32.65L56.81 32.70L56.80 32.70Q56.88 33.36 56.85 34.50L56.78 34.43L56.81 34.46Q57.22 34.43 60.32 34.56L60.42 34.65L60.29 34.52Q59.50 31.87 59.30 28.48L59.30 28.47L59.40 28.57Q62.23 28.63 64.02 28.95L64.01 28.95L63.98 28.91Q63.85 28.13 63.85 27.32L63.76 27.22L63.85 25.68L63.92 25.76Q63.59 25.62 63.13 25.65L63.13 25.65L62.46 25.66L62.50 25.70Q62.48 25.00 62.58 23.82Z"></path>
+                                <path d="M4 9 C52 1,46 13,118 16" stroke="#888" fill="none"></path>
+                                <path d="M17 3 C63 32,66 5,100 30" stroke="#666" fill="none"></path>
+                                <path fill="#222" d="M92.73 31.00L92.71 30.99L92.79 31.07Q93.06 31.92 93.51 33.65L93.46 33.59L93.49 33.62Q89.82 32.43 85.87 32.66L85.85 32.64L85.95 32.74Q81.99 32.92 78.56 34.62L78.60 34.66L78.52 34.57Q78.73 34.00 78.76 34.06L78.90 34.20L78.79 34.09Q82.02 30.74 85.38 26.95L85.32 26.89L85.46 27.02Q89.20 22.71 90.21 18.69L90.12 18.60L90.13 18.62Q90.58 17.17 89.49 16.16L89.40 16.07L89.52 16.19Q88.30 15.05 86.76 15.18L86.91 15.32L86.79 15.21Q86.59 15.27 86.30 15.27L86.31 15.28L86.34 15.31Q85.01 15.28 83.93 16.07L83.87 16.00L83.97 16.11Q82.68 17.10 82.88 19.39L83.01 19.52L82.88 19.39Q81.42 19.17 80.38 18.78L80.31 18.71L80.30 18.71Q80.14 17.49 80.07 16.25L80.21 16.39L80.08 16.26Q80.08 14.93 80.60 13.95L80.65 13.99L80.59 13.93Q82.12 12.76 84.99 12.76L85.00 12.76L86.52 12.78L86.56 12.82Q88.54 12.87 89.35 12.97L89.24 12.86L89.37 12.99Q92.93 13.19 93.16 15.28L93.35 15.47L93.27 15.38Q93.40 15.95 93.34 16.63L93.26 16.55L93.23 16.52Q93.19 17.07 93.06 17.66L93.08 17.67L93.11 17.71Q91.77 24.73 85.28 30.60L85.09 30.41L85.20 30.52Q86.45 30.43 87.62 30.43L87.61 30.42L87.49 30.30Q90.29 30.32 92.74 31.01ZM92.22 13.14L92.37 13.28L92.35 13.26Q90.91 12.63 89.44 12.57L89.54 12.67L86.45 12.35L86.58 12.48Q82.68 12.17 80.79 13.12L80.78 13.11L80.82 13.16Q79.82 14.24 79.82 16.00L79.90 16.08L79.99 16.18Q79.85 16.62 80.11 19.03L80.28 19.20L80.29 19.21Q80.75 19.41 81.76 19.67L81.75 19.66L81.58 20.37L81.71 20.50Q81.65 20.87 81.72 21.33L81.78 21.39L81.72 21.33Q82.85 21.48 84.97 21.68L84.98 21.68L84.83 21.53Q84.91 21.32 84.91 21.03L84.93 21.05L84.82 20.94Q84.94 19.49 85.98 18.33L85.91 18.25L85.86 18.21Q86.91 17.06 88.45 17.16L88.43 17.14L88.46 17.17Q89.12 17.21 89.77 17.34L89.83 17.39L89.80 17.37Q89.82 17.62 89.88 17.97L89.89 17.98L90.01 18.10Q89.89 18.31 89.83 18.60L89.83 18.61L89.91 18.69Q88.79 22.72 85.00 26.86L84.99 26.85L84.97 26.83Q83.20 28.82 78.54 34.01L78.58 34.04L78.54 34.01Q78.37 34.72 78.08 35.21L78.14 35.27L78.11 35.24Q79.51 34.52 80.82 34.06L80.70 33.95L80.78 34.03Q80.10 34.46 79.28 35.73L79.26 35.71L79.25 35.70Q79.16 36.00 79.07 36.30L79.11 36.34L79.25 36.48Q83.41 34.70 88.11 34.87L87.93 34.69L88.04 34.79Q92.91 34.93 96.82 36.96L96.86 36.99L95.94 35.09L95.99 35.14Q95.39 33.96 95.16 33.27L95.26 33.37L95.26 33.37Q94.65 33.02 93.61 32.66L93.53 32.58L93.52 32.58Q93.30 31.87 92.98 30.69L92.99 30.70L92.95 30.67Q91.25 30.37 89.29 30.20L89.19 30.10L89.23 30.14Q93.26 26.25 94.57 19.17L94.47 19.07L94.70 16.65L94.70 16.65Q94.58 15.07 93.53 14.48L93.51 14.45L93.49 14.47L93.44 14.42Q93.43 14.37 93.37 14.37L93.45 14.46L93.50 14.51Q93.18 13.67 92.23 13.14Z"></path>
+                                <path d="M13 23 C59 15,63 2,106 7" stroke="#888" fill="none"></path>
+                                <path d="M15 7 C40 4,72 12,109 6" stroke="#333" fill="none"></path>
+                                <path d="M7 30 C48 32,73 8,110 23" stroke="#333" fill="none"></path>
+                                <path d="M14 11 C39 37,69 8,111 36" stroke="#666" fill="none"></path>
+                                <path fill="#333" d="M26.93 23.51L26.92 23.50L26.95 23.54Q25.50 23.69 24.46 24.83L24.36 24.73L24.36 24.73Q23.26 25.81 23.13 27.45L23.23 27.55L23.12 27.44Q23.11 29.42 24.15 30.28L24.02 30.15L23.99 30.12Q25.07 31.02 26.89 30.95L27.00 31.05L26.99 31.05Q28.84 30.77 29.65 29.96L29.72 30.03L29.81 30.12Q30.65 28.83 30.55 27.27L30.63 27.34L30.44 27.16Q30.44 25.65 29.51 24.62L29.57 24.69L29.42 24.54Q28.51 23.53 26.95 23.53ZM26.93 15.45L27.04 15.57L27.03 15.55Q25.68 15.31 24.54 15.74L24.68 15.89L24.62 15.82Q23.60 16.60 23.80 18.19L23.79 18.19L23.66 18.06Q24.11 21.28 26.98 21.28L27.03 21.33L26.98 21.28Q28.44 21.57 29.29 20.59L29.21 20.51L29.12 20.42Q30.02 19.49 30.05 18.15L30.11 18.21L29.99 18.10Q30.16 16.70 29.54 16.17L29.53 16.16L29.43 16.06Q28.17 15.52 27.06 15.59ZM26.79 33.17L26.82 33.20L24.12 33.11L24.16 33.14Q22.91 33.20 21.77 32.45L21.72 32.41L21.74 32.42Q20.50 31.38 20.64 28.94L20.71 29.01L20.62 28.92Q21.10 23.14 24.20 22.29L24.22 22.31L24.18 22.26Q22.17 21.43 21.03 16.83L21.02 16.82L21.03 16.84Q20.69 15.58 20.75 14.89L20.83 14.97L20.87 15.01Q21.10 13.15 24.27 13.12L24.21 13.06L24.21 13.06Q27.94 13.11 29.18 13.27L29.00 13.09L29.18 13.26Q32.30 13.55 32.69 15.28L32.73 15.32L32.77 15.36Q32.98 15.99 32.98 16.31L32.79 16.13L32.94 16.27Q32.79 16.71 32.62 17.23L32.74 17.35L32.76 17.37Q32.27 21.02 29.76 22.33L29.64 22.21L29.72 22.29Q32.73 22.99 33.16 27.52L33.02 27.39L33.17 27.54Q33.01 27.50 33.04 28.61L33.18 28.75L33.17 28.75Q33.29 31.15 31.92 32.06L31.74 31.88L31.79 31.93Q30.73 32.80 26.81 33.19ZM28.70 35.11L28.69 35.10L31.55 35.15L31.66 35.27Q33.05 35.24 34.35 34.62L34.42 34.69L34.44 34.72Q35.37 34.04 35.43 32.44L35.35 32.36L35.33 32.34Q35.34 31.37 35.01 29.71L35.00 29.69L35.15 29.84Q34.40 25.90 32.61 24.30L32.49 24.18L32.26 23.79L32.13 23.59L31.99 23.35L32.14 23.51Q33.37 22.15 34.15 18.60L34.28 18.73L34.33 18.78Q34.19 18.31 34.25 17.59L34.26 17.60L34.41 17.75Q34.42 17.10 34.35 16.58L34.28 16.51L34.40 16.63Q34.16 15.28 33.15 14.86L33.19 14.90L33.26 14.93L33.05 14.79L33.07 14.81Q32.79 14.14 31.78 13.45L31.84 13.51L31.76 13.40L31.90 13.54Q30.20 12.95 26.71 12.79L26.58 12.66L26.67 12.75Q25.33 12.65 24.15 12.74L24.10 12.70L24.22 12.81Q23.54 12.85 22.43 12.98L22.31 12.86L22.33 12.88Q20.70 13.24 20.50 14.64L20.58 14.72L20.46 14.60Q20.40 14.99 20.43 15.68L20.43 15.68L20.39 15.63Q20.51 16.11 21.00 18.14L21.10 18.24L21.08 18.22Q21.69 20.92 23.20 22.07L23.27 22.14L23.40 22.27L23.27 22.14Q20.85 23.21 20.39 27.65L20.51 27.76L20.39 27.65Q20.25 29.56 20.25 30.34L20.26 30.36L20.30 30.39Q20.39 31.95 21.40 32.73L21.48 32.81L21.30 32.63Q21.53 32.84 21.76 33.00L21.63 32.87L21.67 32.90Q22.65 34.96 28.75 35.16ZM28.37 25.57L28.45 25.65L28.45 25.65Q29.27 25.63 30.02 26.02L29.98 25.98L29.92 25.92Q30.17 26.69 30.14 27.15L30.15 27.16L30.33 27.34Q30.18 27.41 30.18 27.67L30.22 27.72L30.20 27.70Q30.29 29.81 28.33 30.53L28.30 30.50L28.40 30.60Q27.64 30.79 26.96 30.69L27.02 30.75L26.84 30.57Q26.06 30.84 25.08 30.45L24.98 30.34L24.93 30.29Q24.70 29.74 24.77 28.89L24.79 28.91L24.88 29.00Q24.91 27.53 25.94 26.49L25.93 26.48L26.08 26.63Q27.13 25.61 28.50 25.71ZM28.63 17.51L28.63 17.52L28.52 17.40Q29.24 17.34 29.70 17.47L29.69 17.47L29.82 18.28L29.82 18.28Q29.80 19.47 29.02 20.34L28.92 20.24L28.93 20.24Q28.14 21.10 26.97 20.94L27.02 20.99L27.03 21.01Q26.19 21.01 25.83 20.82L25.79 20.78L25.77 20.76Q25.85 20.64 25.75 20.05L25.76 20.06L25.70 20.01Q25.38 18.70 26.42 17.98L26.39 17.95L26.50 18.06Q27.38 17.44 28.59 17.47Z"></path>
+                              </svg></span></div>
+                          <div class="invalid-feedback">Invalid Code</div>
+                        </div>
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="text" placeholder="Enter SMS verification code" required="required"/>
+                          <div class="input-group-append">
+                            <button class="btn btn-gradient-blue element-append" type="button">Send</button>
+                          </div>
+                          <div class="invalid-feedback">Invalid Code</div>
+                        </div>
+                        <div class="form-group form-check">
+                          <input class="form-check-input" type="checkbox"/>
+                          <label class="form-check-label"><small>I agree with CoinCola's <a href="#">Terms of Service </a>and <a href="#">Privacy Policy</a></small></label>
+                        </div>
+                        <div class="form-group text-right">
+                          <button class="btn btn-lg btn-gradient-orange" type="submit">Sign up</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="container-fluid bg-footer py-4">
+        <div class="container footer">
+          <div class="row justify-content-between">
+            <div class="cell">
+              <h6 class="font-bold pt-2">BCASH EXCHANGE</h6>
+              <div class="pb-2"><i class="fas fa-envelope pr-1"></i>Email: <a href="mailto:support@bcashpay.org">Support@BcashPay.org</a></div>
+              <div class="pb-2"><i class="fas fa-comments pr-1"></i><a href="#">Online support</a></div>
+              <div class="pb-4"><i class="fas fa-question-circle pr-1"></i><a href="./faq.html">Frequently Asked Questions</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">INTRODUCE</h6>
+              <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="./about.html">About us</a></div>
+              <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Fees</a></div>
+              <div class="pb-4"><i class="fas fa-chevron-circle-right pr-1"></i><a href="./policy_term.html">Policies and Terms</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">SOCIAL MEDIA</h6>
+              <div class="pb-2"><i class="fab fa-facebook-square pr-1"></i><a href="#">Facebook</a></div>
+              <div class="pb-2"><i class="fab fa-telegram pr-1"></i><a href="#">Telegram</a></div>
+              <div class="pb-4"><i class="fab fa-twitter pr-1"></i><a href="#">Twitter</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">SIGN UP FOR THE NEWSLETTER</h6>
+              <div class="pb-2">Please register to receive latest news from <b>BCASH Exchange</b></div>
+              <div class="input-group mb-3">
+                <input class="form-control" type="email" placeholder="Enter your mail" aria-label="Enter your mail" aria-describedby="button-addon2"/>
+                <div class="input-group-append">
+                  <button class="btn btn-gradient-orange" type="button" id="button-addon2">Agree</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bg-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col py-2">Designed by BCASH EXCHANGE. All rights reserved. © 2018</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/addons/datatables.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+              }, false);
+              });
+          }, false);
+      })();
+    </script>
+    <script>
+      (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+              }, false);
+              });
+          }, false);
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Layout</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+    <link href="../css/addons/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+    <link href="../css/addons/datatables.min.css" rel="stylesheet"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/app.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="wrapper main-wrapper-bg">
+      <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar">
+        <div class="container"><a class="navbar-brand" href="./index.html"><img src="../assets/logo.png" alt=""/></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav w-100">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBTC" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BTC</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownBTC"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownETH" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ETH</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownETH"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBCash" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BCASH</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownBCash"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">LTC</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">XMR</a></li>
+              <li class="nav-item dropdown ml-auto"><a class="nav-link dropdown-toggle" href="./order.html" id="navbarDropdownOrder" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="far fa-file-alt pr-1"></i>Order</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownOrder"><a class="dropdown-item" href="./order.html">OTC Orders</a><a class="dropdown-item" href="./order.html">Exchange Orders</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./wallet.html" id="navbarDropdownWallet" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-wallet pr-1"></i>Assets</a>
+                <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdownWallet"><a class="dropdown-item" href="./wallet.html"> <span class="text-blue font-bold">OTC Account</span>
+                    <table class="table table-sm mt-2">
+                      <thead>
+                        <tr>
+                          <th>Coin</th>
+                          <th>Available</th>
+                          <th>Frozen</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>ETH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>BCASH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>LTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>XMR</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                      </tbody>
+                    </table><span class="text-blue font-bold">Exchange Account</span>
+                    <table class="table table-sm mt-2">
+                      <thead>
+                        <tr>
+                          <th>Coin</th>
+                          <th>Available</th>
+                          <th>Frozen</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>ETH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>BCASH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>LTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>XMR</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                      </tbody>
+                    </table></a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./user_profile.html" id="navbarDropdownUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-user-circle pr-1"></i>User</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownUser"><a class="dropdown-item" href="./user_profile.html">User Center</a><a class="dropdown-item" href="#">Advertisements</a><a class="dropdown-item" href="#">Invite friends</a><a class="dropdown-item" href="./index.html">Log out</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">| Lang</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">English</a><a class="dropdown-item" href="#">Vietnamese</a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <main class="main-content">   
+        <div class="content-wrapper">
+          <div class="container bg-white mx-3 content">
+            <div class="row pt-5">
+              <div class="col">
+                <h4>OTC transaction details</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col pb-4">
+                <ul class="nav nav-tabs custom-tabs my-3" role="tablist">
+                  <li class="nav-item mr-3"><a class="active px-2" data-toggle="tab" href="#transactionBTC">BTC</a></li>
+                  <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionETH">ETH</a></li>
+                  <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionBcash">BCASH</a></li>
+                  <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionLTC">LTC</a></li>
+                  <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionXMR">XMR</a></li>
+                </ul>
+                <div class="tab-content mb-5">
+                  <div class="container tab-pane active p-0" id="transactionBTC">
+                    <div class="row no-gutters">
+                      <div class="col info-box px-3">
+                        <div class="custom-scrollbar">
+                          <ul class="nav nav-tabs custom-tabs mt-1 scroll-tabs" role="tablist">
+                            <li class="nav-item mr-3"><a class="active px-2" data-toggle="tab" href="#transactionItemAllBTC">All</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemDepositsBTC">Deposits</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemWithdrawsBTC">Withdraws</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemBuyBTC">Buy</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemSellBTC">Sell</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTradeInBTC">Trade in</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTradeOutBTC">Trade out</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemFeesBTC">Fees</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemCommissionBTC">Commission rewards</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemPromotionRewardBTC">Promotion rewards</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTransferBTC">Transfer</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemPromotionSpendBTC">Promotion spend</a></li>
+                          </ul>
+                        </div>
+                        <div class="tab-content mb-5">
+                          <div class="container tab-pane active p-0" id="transactionItemAllBTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.                                                            </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemDepositsBTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">11.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemWithdrawsBTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">12.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemBuyBTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">13.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemSellBTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTradeInBTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTradeOutBTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemFeesBTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane p-0" id="transactionItemCommissionBTCcontainer">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemPromotionRewardBTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTransferBTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemPromotionSpendBTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="transactionETH">
+                    <div class="row no-gutters">
+                      <div class="col info-box px-3">
+                        <div class="custom-scrollbar">
+                          <ul class="nav nav-tabs custom-tabs mt-1 scroll-tabs" role="tablist">
+                            <li class="nav-item mr-3"><a class="active px-2" data-toggle="tab" href="#transactionItemAllETH">All</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemDepositsETH">Deposits</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemWithdrawsETH">Withdraws</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemBuyETH">Buy</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemSellETH">Sell</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTradeInETH">Trade in</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTradeOutETH">Trade out</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemFeesETH">Fees</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemCommissionETH">Commission rewards</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemPromotionRewardETH">Promotion rewards</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTransferETH">Transfer</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemPromotionSpendETH">Promotion spend</a></li>
+                          </ul>
+                        </div>
+                        <div class="tab-content mb-5">
+                          <div class="container tab-pane active p-0" id="transactionItemAllETH">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.                                                            </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemDepositsETH">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">11.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemWithdrawsETH">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">12.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemBuyETH">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">13.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemSellETH">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTradeInETH">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTradeOutETH">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemFeesETH">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane p-0" id="transactionItemCommissionETHcontainer">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemPromotionRewardETH">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTransferETH">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemPromotionSpendETH">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="transactionBcash">
+                    <div class="row no-gutters">
+                      <div class="col info-box px-3">
+                        <div class="custom-scrollbar">
+                          <ul class="nav nav-tabs custom-tabs mt-1 scroll-tabs" role="tablist">
+                            <li class="nav-item mr-3"><a class="active px-2" data-toggle="tab" href="#transactionItemAllBcash">All</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemDepositsBcash">Deposits</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemWithdrawsBcash">Withdraws</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemBuyBcash">Buy</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemSellBcash">Sell</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTradeInBcash">Trade in</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTradeOutBcash">Trade out</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemFeesBcash">Fees</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemCommissionBcash">Commission rewards</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemPromotionRewardBcash">Promotion rewards</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTransferBcash">Transfer</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemPromotionSpendBcash">Promotion spend</a></li>
+                          </ul>
+                        </div>
+                        <div class="tab-content mb-5">
+                          <div class="container tab-pane active p-0" id="transactionItemAllBcash">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.                                                            </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemDepositsBcash">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">11.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemWithdrawsBcash">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">12.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemBuyBcash">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">13.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemSellBcash">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTradeInBcash">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTradeOutBcash">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemFeesBcash">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane p-0" id="transactionItemCommissionBcashcontainer">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemPromotionRewardBcash">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTransferBcash">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemPromotionSpendBcash">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="transactionLTC">
+                    <div class="row no-gutters">
+                      <div class="col info-box px-3">
+                        <div class="custom-scrollbar">
+                          <ul class="nav nav-tabs custom-tabs mt-1 scroll-tabs" role="tablist">
+                            <li class="nav-item mr-3"><a class="active px-2" data-toggle="tab" href="#transactionItemAllLTC">All</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemDepositsLTC">Deposits</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemWithdrawsLTC">Withdraws</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemBuyLTC">Buy</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemSellLTC">Sell</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTradeInLTC">Trade in</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTradeOutLTC">Trade out</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemFeesLTC">Fees</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemCommissionLTC">Commission rewards</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemPromotionRewardLTC">Promotion rewards</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTransferLTC">Transfer</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemPromotionSpendLTC">Promotion spend</a></li>
+                          </ul>
+                        </div>
+                        <div class="tab-content mb-5">
+                          <div class="container tab-pane active p-0" id="transactionItemAllLTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.                                                            </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemDepositsLTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">11.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemWithdrawsLTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">12.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemBuyLTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">13.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemSellLTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTradeInLTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTradeOutLTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemFeesLTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane p-0" id="transactionItemCommissionLTCcontainer">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemPromotionRewardLTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTransferLTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemPromotionSpendLTC">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="transactionXMR">
+                    <div class="row no-gutters">
+                      <div class="col info-box px-3">
+                        <div class="custom-scrollbar">
+                          <ul class="nav nav-tabs custom-tabs mt-1 scroll-tabs" role="tablist">
+                            <li class="nav-item mr-3"><a class="active px-2" data-toggle="tab" href="#transactionItemAllXMR">All</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemDepositsXMR">Deposits</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemWithdrawsXMR">Withdraws</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemBuyXMR">Buy</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemSellXMR">Sell</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTradeInXMR">Trade in</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTradeOutXMR">Trade out</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemFeesXMR">Fees</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemCommissionXMR">Commission rewards</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemPromotionRewardXMR">Promotion rewards</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemTransferXMR">Transfer</a></li>
+                            <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#transactionItemPromotionSpendXMR">Promotion spend</a></li>
+                          </ul>
+                        </div>
+                        <div class="tab-content mb-5">
+                          <div class="container tab-pane active p-0" id="transactionItemAllXMR">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.                                                            </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemDepositsXMR">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">11.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemWithdrawsXMR">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">12.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemBuyXMR">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">13.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="text-left">4-12-2018 10:59</td>
+                                      <td class="text-left">Data</td>
+                                      <td class="text-left">10.00000</td>
+                                      <td class="text-left">Lorem ipsum dolor sit amet.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemSellXMR">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTradeInXMR">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTradeOutXMR">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemFeesXMR">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane p-0" id="transactionItemCommissionXMRcontainer">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemPromotionRewardXMR">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemTransferXMR">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="container tab-pane p-0" id="transactionItemPromotionSpendXMR">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <table class="table-plugin">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Time</th>
+                                      <th class="text-left">Type</th>
+                                      <th class="text-left">Quantity</th>
+                                      <th class="text-left">Instructions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="container-fluid bg-footer py-4">
+        <div class="container footer">
+          <div class="row justify-content-between">
+            <div class="cell">
+              <h6 class="font-bold pt-2">BCASH EXCHANGE</h6>
+              <div class="pb-2"><i class="fas fa-envelope pr-1"></i>Email: <a href="mailto:support@bcashpay.org">Support@BcashPay.org</a></div>
+              <div class="pb-2"><i class="fas fa-comments pr-1"></i><a href="#">Online support</a></div>
+              <div class="pb-4"><i class="fas fa-question-circle pr-1"></i><a href="./faq.html">Frequently Asked Questions</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">INTRODUCE</h6>
+              <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="./about.html">About us</a></div>
+              <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Fees</a></div>
+              <div class="pb-4"><i class="fas fa-chevron-circle-right pr-1"></i><a href="./policy_term.html">Policies and Terms</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">SOCIAL MEDIA</h6>
+              <div class="pb-2"><i class="fab fa-facebook-square pr-1"></i><a href="#">Facebook</a></div>
+              <div class="pb-2"><i class="fab fa-telegram pr-1"></i><a href="#">Telegram</a></div>
+              <div class="pb-4"><i class="fab fa-twitter pr-1"></i><a href="#">Twitter</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">SIGN UP FOR THE NEWSLETTER</h6>
+              <div class="pb-2">Please register to receive latest news from <b>BCASH Exchange</b></div>
+              <div class="input-group mb-3">
+                <input class="form-control" type="email" placeholder="Enter your mail" aria-label="Enter your mail" aria-describedby="button-addon2"/>
+                <div class="input-group-append">
+                  <button class="btn btn-gradient-orange" type="button" id="button-addon2">Agree</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bg-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col py-2">Designed by BCASH EXCHANGE. All rights reserved. © 2018</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/addons/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/addons/datatables.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                      if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                      }
+                      form.classList.add('was-validated');
+                  }, false);
+              });
+          }, false);
+      })();
+    </script>
+    <script>
+      (function() {
+          var table = $('.table-plugin').DataTable({
+              searching: false,
+              ordering:  false,
+              info: false,
+              paging: false,
+              bLengthChange: false,
+              autoWidth: false,
+              scrollX: false
+          });
+          $(".custom-scrollbar").mCustomScrollbar({
+              axis:"x",
+              theme:"dark-thin",
+              autoExpandScrollbar:true,
+              advanced:{autoExpandHorizontalScroll:true}
+          });
+      })();
+    </script>
+  </body>
+</html>

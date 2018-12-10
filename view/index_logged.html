@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Layout</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+    <link href="../css/addons/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+    <link href="../css/addons/datatables.min.css" rel="stylesheet"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/app.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="wrapper main-wrapper-bg">
+      <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar">
+        <div class="container"><a class="navbar-brand" href="./index.html"><img src="../assets/logo.png" alt=""/></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav w-100">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBTC" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BTC</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownBTC"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownETH" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ETH</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownETH"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBCash" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">BCASH</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownBCash"><a class="dropdown-item" href="#">OTC</a><a class="dropdown-item" href="#">Exchange</a></div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">LTC</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">XMR</a></li>
+              <li class="nav-item dropdown ml-auto"><a class="nav-link dropdown-toggle" href="./order.html" id="navbarDropdownOrder" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="far fa-file-alt pr-1"></i>Order</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownOrder"><a class="dropdown-item" href="./order.html">OTC Orders</a><a class="dropdown-item" href="./order.html">Exchange Orders</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./wallet.html" id="navbarDropdownWallet" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-wallet pr-1"></i>Assets</a>
+                <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdownWallet"><a class="dropdown-item" href="./wallet.html"> <span class="text-blue font-bold">OTC Account</span>
+                    <table class="table table-sm mt-2">
+                      <thead>
+                        <tr>
+                          <th>Coin</th>
+                          <th>Available</th>
+                          <th>Frozen</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>ETH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>BCASH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>LTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>XMR</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                      </tbody>
+                    </table><span class="text-blue font-bold">Exchange Account</span>
+                    <table class="table table-sm mt-2">
+                      <thead>
+                        <tr>
+                          <th>Coin</th>
+                          <th>Available</th>
+                          <th>Frozen</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>ETH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>BCASH</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>LTC</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                        <tr>
+                          <td>XMR</td>
+                          <td>0.00000000</td>
+                          <td>0.00000000</td>
+                        </tr>
+                      </tbody>
+                    </table></a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="./user_profile.html" id="navbarDropdownUser" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-user-circle pr-1"></i>User</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownUser"><a class="dropdown-item" href="./user_profile.html">User Center</a><a class="dropdown-item" href="#">Advertisements</a><a class="dropdown-item" href="#">Invite friends</a><a class="dropdown-item" href="./index.html">Log out</a></div>
+              </li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">| Lang</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">English</a><a class="dropdown-item" href="#">Vietnamese</a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <main class="main-content">   
+        <div class="banner">
+          <div id="particles-js"></div>
+          <div class="banner-img"></div>
+          <div class="info">BCASH EXCHANGE</div>
+          <div class="info-2">
+            <h3 class="text-uppercase">Market place  <br/>and <br/>exchange</h3>
+            <p>Connecting you to future finance</p>
+          </div>
+        </div>
+        <div class="market container-fluid mt-5 mb-3">
+          <div class="row">
+            <div class="col">
+              <h1 class="main-title text-center">BCash Marketplace</h1>
+            </div>
+          </div>
+          <div class="row market-wrapper">
+            <div class="col">
+              <ul class="nav nav-tabs my-3" role="tablist">
+                <li class="nav-item mx-3"><a class="btn btn-lg active btn-gradient-blue btn-glow" data-toggle="tab" href="#buyList">Buy</a></li>
+                <li class="nav-item mx-3"><a class="btn btn-lg btn-gradient-blue btn-glow" data-toggle="tab" href="#sellList">Sell</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="container tab-pane active" id="buyList">
+                  <div class="row">
+                    <div class="col-lg-3 col-sm-6 py-4">
+                      <div class="card bg-white-grey">
+                        <div class="card-header"><span class="card-img"><img src="../assets/svg/businessman.svg" alt=""/></span><span class="card-name">leonardo dicaprio</span></div>
+                        <div class="card-body">
+                          <div class="field"><span class="name">Trades:</span><span class="value">9324</span></div>
+                          <div class="field"><span class="name">Rating:</span><span class="value">99%</span></div>
+                          <div class="field"><span class="name">Payment method:</span><span class="value"> <img class="payment-icons" src="../assets/mobile_payment.jpg" alt=""/></span></div>
+                          <div class="field mt-4"><span class="name">Limits:</span><span class="value">5000 -66958 CNY</span></div>
+                          <div class="field flex-column"><span class="name name-price">Price</span><span class="value-price">44680 CNY</span></div>
+                          <div class="card-buttons pb-3 text-right"><a class="btn btn-gradient-orange" href="#">Buy BTC</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 py-4">
+                      <div class="card bg-white-grey">
+                        <div class="card-header"><span class="card-img"><img src="../assets/svg/cashier.svg" alt=""/></span><span class="card-name">vivien</span></div>
+                        <div class="card-body">
+                          <div class="field"><span class="name">Trades:</span><span class="value">9324</span></div>
+                          <div class="field"><span class="name">Rating:</span><span class="value">99%</span></div>
+                          <div class="field"><span class="name">Payment method:</span><span class="value"> <img class="payment-icons" src="../assets/mobile_payment.jpg" alt=""/></span></div>
+                          <div class="field mt-4"><span class="name">Limits:</span><span class="value">5000 -66958 CNY</span></div>
+                          <div class="field flex-column"><span class="name name-price">Price</span><span class="value-price">44680 CNY</span></div>
+                          <div class="card-buttons pb-3 text-right"><a class="btn btn-gradient-orange" href="#">Buy BTC</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 py-4">
+                      <div class="card bg-white-grey">
+                        <div class="card-header"><span class="card-img"><img src="../assets/svg/chef.svg" alt=""/></span><span class="card-name">gordon ramsey</span></div>
+                        <div class="card-body">
+                          <div class="field"><span class="name">Trades:</span><span class="value">9324</span></div>
+                          <div class="field"><span class="name">Rating:</span><span class="value">99%</span></div>
+                          <div class="field"><span class="name">Payment method:</span><span class="value"> <img class="payment-icons" src="../assets/mobile_payment.jpg" alt=""/></span></div>
+                          <div class="field mt-4"><span class="name">Limits:</span><span class="value">5000 -66958 CNY</span></div>
+                          <div class="field flex-column"><span class="name name-price">Price</span><span class="value-price">44680 CNY</span></div>
+                          <div class="card-buttons pb-3 text-right"><a class="btn btn-gradient-orange" href="#">Buy BTC</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 py-4">
+                      <div class="card bg-white-grey">
+                        <div class="card-header"><span class="card-img"><img src="../assets/svg/doctor.svg" alt=""/></span><span class="card-name">dr strange</span></div>
+                        <div class="card-body">
+                          <div class="field"><span class="name">Trades:</span><span class="value">9324</span></div>
+                          <div class="field"><span class="name">Rating:</span><span class="value">99%</span></div>
+                          <div class="field"><span class="name">Payment method:</span><span class="value"> <img class="payment-icons" src="../assets/mobile_payment.jpg" alt=""/></span></div>
+                          <div class="field mt-4"><span class="name">Limits:</span><span class="value">5000 -66958 CNY</span></div>
+                          <div class="field flex-column"><span class="name name-price">Price</span><span class="value-price">44680 CNY</span></div>
+                          <div class="card-buttons pb-3 text-right"><a class="btn btn-gradient-orange" href="#">Buy BTC</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container tab-pane fade" id="sellList">
+                  <div class="row">
+                    <div class="col-lg-3 col-sm-6 py-4">
+                      <div class="card bg-white-grey">
+                        <div class="card-header"><span class="card-img"><img src="../assets/svg/teacher.svg" alt=""/></span><span class="card-name">mr. teacher</span></div>
+                        <div class="card-body">
+                          <div class="field"><span class="name">Trades:</span><span class="value">9324</span></div>
+                          <div class="field"><span class="name">Rating:</span><span class="value">99%</span></div>
+                          <div class="field"><span class="name">Payment method:</span><span class="value"> <img class="payment-icons" src="../assets/mobile_payment.jpg" alt=""/></span></div>
+                          <div class="field mt-4"><span class="name">Limits:</span><span class="value">5000 -66958 CNY</span></div>
+                          <div class="field flex-column"><span class="name name-price">Price</span><span class="value-price">44680 CNY</span></div>
+                          <div class="card-buttons pb-3 text-right"><a class="btn btn-gradient-orange" href="#">Sell BTC</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 py-4">
+                      <div class="card bg-white-grey">
+                        <div class="card-header"><span class="card-img"><img src="../assets/svg/worker.svg" alt=""/></span><span class="card-name">hard</span></div>
+                        <div class="card-body">
+                          <div class="field"><span class="name">Trades:</span><span class="value">9324</span></div>
+                          <div class="field"><span class="name">Rating:</span><span class="value">99%</span></div>
+                          <div class="field"><span class="name">Payment method:</span><span class="value"> <img class="payment-icons" src="../assets/mobile_payment.jpg" alt=""/></span></div>
+                          <div class="field mt-4"><span class="name">Limits:</span><span class="value">5000 -66958 CNY</span></div>
+                          <div class="field flex-column"><span class="name name-price">Price</span><span class="value-price">44680 CNY</span></div>
+                          <div class="card-buttons pb-3 text-right"><a class="btn btn-gradient-orange" href="#">Sell BTC</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 py-4">
+                      <div class="card bg-white-grey">
+                        <div class="card-header"><span class="card-img"><img src="../assets/svg/waiter.svg" alt=""/></span><span class="card-name">titi</span></div>
+                        <div class="card-body">
+                          <div class="field"><span class="name">Trades:</span><span class="value">9324</span></div>
+                          <div class="field"><span class="name">Rating:</span><span class="value">99%</span></div>
+                          <div class="field"><span class="name">Payment method:</span><span class="value"> <img class="payment-icons" src="../assets/mobile_payment.jpg" alt=""/></span></div>
+                          <div class="field mt-4"><span class="name">Limits:</span><span class="value">5000 -66958 CNY</span></div>
+                          <div class="field flex-column"><span class="name name-price">Price</span><span class="value-price">44680 CNY</span></div>
+                          <div class="card-buttons pb-3 text-right"><a class="btn btn-gradient-orange" href="#">Sell BTC</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 py-4">
+                      <div class="card bg-white-grey">
+                        <div class="card-header"><span class="card-img"><img src="../assets/svg/taxi-driver.svg" alt=""/></span><span class="card-name">ben</span></div>
+                        <div class="card-body">
+                          <div class="field"><span class="name">Trades:</span><span class="value">9324</span></div>
+                          <div class="field"><span class="name">Rating:</span><span class="value">99%</span></div>
+                          <div class="field"><span class="name">Payment method:</span><span class="value"> <img class="payment-icons" src="../assets/mobile_payment.jpg" alt=""/></span></div>
+                          <div class="field mt-4"><span class="name">Limits:</span><span class="value">5000 -66958 CNY</span></div>
+                          <div class="field flex-column"><span class="name name-price">Price</span><span class="value-price">44680 CNY</span></div>
+                          <div class="card-buttons pb-3 text-right"><a class="btn btn-gradient-orange" href="#">Sell BTC</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col text-right"><a class="btn btn-gradient-blue btn-glow mt-3" href="#">See more</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="exchange my-3 container-fluid">
+          <div class="row">
+            <div class="col my-4">
+              <h1 class="main-title text-center">BCash Exchange</h1>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="exchange-wrapper">
+                  <table class="table-plugin" id="tblExchange">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-left">Pair</th>
+                        <th class="text-uppercase text-left">Last price</th>
+                        <th class="text-uppercase text-left">24h Change</th>
+                        <th class="text-uppercase text-left">24h High</th>
+                        <th class="text-uppercase text-left">24h Low</th>
+                        <th class="text-uppercase text-left">24h Volume</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">BTC/USDT</td>
+                        <td class="text-left">6436.35</td>
+                        <td class="text-left text-green">+0.11%</td>
+                        <td class="text-left">6478.99</td>
+                        <td class="text-left">6380.00</td>
+                        <td class="text-left">23.213620</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">ETH/USDT</td>
+                        <td class="text-left">6436.35</td>
+                        <td class="text-left text-red">-0.4%</td>
+                        <td class="text-left">6478.99</td>
+                        <td class="text-left">6380.00</td>
+                        <td class="text-left">23.213620</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">BCH/USDT</td>
+                        <td class="text-left">6436.35</td>
+                        <td class="text-left text-green">+0.11%</td>
+                        <td class="text-left">6478.99</td>
+                        <td class="text-left">6380.00</td>
+                        <td class="text-left">23.213620</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">LTC/USDT</td>
+                        <td class="text-left">6436.35</td>
+                        <td class="text-left text-red">-0.8%</td>
+                        <td class="text-left">6478.99</td>
+                        <td class="text-left">6380.00</td>
+                        <td class="text-left">23.213620</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">BTC/USDT</td>
+                        <td class="text-left">6436.35</td>
+                        <td class="text-left text-green">+0.11%</td>
+                        <td class="text-left">6478.99</td>
+                        <td class="text-left">6380.00</td>
+                        <td class="text-left">23.213620</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">ETH/USDT</td>
+                        <td class="text-left">6436.35</td>
+                        <td class="text-left text-red">-0.4%</td>
+                        <td class="text-left">6478.99</td>
+                        <td class="text-left">6380.00</td>
+                        <td class="text-left">23.213620</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">BCH/USDT</td>
+                        <td class="text-left">6436.35</td>
+                        <td class="text-left text-green">+0.11%</td>
+                        <td class="text-left">6478.99</td>
+                        <td class="text-left">6380.00</td>
+                        <td class="text-left">23.213620</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">LTC/USDT</td>
+                        <td class="text-left">6436.35</td>
+                        <td class="text-left text-red">-0.8%</td>
+                        <td class="text-left">6478.99</td>
+                        <td class="text-left">6380.00</td>
+                        <td class="text-left">23.213620</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col text-right mt-4"><a class="btn btn-gradient-blue btn-glow mt-3" href="#">See more</a></div>
+            </div>
+          </div>
+          <div class="mobile-app my-3 container-fluid">
+            <row>
+              <div class="col">
+                <h1 class="main-title text-center">Mobile app</h1>
+                <div class="row justify-content-center">
+                  <p class="text-white py-4 col-sm-8 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis sit nam voluptas minus a optio eveniet molestiae natus illum? Nobis, eveniet ut. Voluptatibus, explicabo numquam reiciendis vero rerum officia! Veritatis.</p>
+                </div>
+                <div class="group-buttons pb-3 text-center"><a class="btn btn-lg btn-gradient-orange m-3" href="#">Windows<i class="fab fa-windows"></i></a><a class="btn btn-lg btn-gradient-orange m-3" href="#">Mac OS<i class="fab fa-apple"></i></a><a class="btn btn-lg btn-gradient-orange m-3" href="#">
+                     Linux<i class="fab fa-linux"></i></a><a class="btn btn-lg btn-gradient-orange m-3" href="#">Android<i class="fab fa-android"></i></a><a class="btn btn-lg btn-gradient-orange m-3" href="#">
+                     iOS<i class="fab fa-apple"></i></a></div>
+              </div>
+            </row>
+          </div>
+        </div>
+      </main>
+      <div class="container-fluid bg-footer py-4">
+        <div class="container footer">
+          <div class="row justify-content-between">
+            <div class="cell">
+              <h6 class="font-bold pt-2">BCASH EXCHANGE</h6>
+              <div class="pb-2"><i class="fas fa-envelope pr-1"></i>Email: <a href="mailto:support@bcashpay.org">Support@BcashPay.org</a></div>
+              <div class="pb-2"><i class="fas fa-comments pr-1"></i><a href="#">Online support</a></div>
+              <div class="pb-4"><i class="fas fa-question-circle pr-1"></i><a href="./faq.html">Frequently Asked Questions</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">INTRODUCE</h6>
+              <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="./about.html">About us</a></div>
+              <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Fees</a></div>
+              <div class="pb-4"><i class="fas fa-chevron-circle-right pr-1"></i><a href="./policy_term.html">Policies and Terms</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">SOCIAL MEDIA</h6>
+              <div class="pb-2"><i class="fab fa-facebook-square pr-1"></i><a href="#">Facebook</a></div>
+              <div class="pb-2"><i class="fab fa-telegram pr-1"></i><a href="#">Telegram</a></div>
+              <div class="pb-4"><i class="fab fa-twitter pr-1"></i><a href="#">Twitter</a></div>
+            </div>
+            <div class="cell">
+              <h6 class="font-bold pt-2">SIGN UP FOR THE NEWSLETTER</h6>
+              <div class="pb-2">Please register to receive latest news from <b>BCASH Exchange</b></div>
+              <div class="input-group mb-3">
+                <input class="form-control" type="email" placeholder="Enter your mail" aria-label="Enter your mail" aria-describedby="button-addon2"/>
+                <div class="input-group-append">
+                  <button class="btn btn-gradient-orange" type="button" id="button-addon2">Agree</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bg-copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col py-2">Designed by BCASH EXCHANGE. All rights reserved. © 2018</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/addons/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/addons/datatables.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                      if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                      }
+                      form.classList.add('was-validated');
+                  }, false);
+              });
+          }, false);
+      })();
+    </script>
+    <script src="../js/addons/particles.min.js"></script>
+    <script>particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#eeeeee"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.02,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":3.2,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;</script>
+    <script>
+      $(function(){
+          var table = $('.table-plugin').DataTable({
+              searching: false,
+              ordering:  false,
+              info: false,
+              paging: false,
+              bLengthChange: false,
+              autoWidth: true,
+              scrollX: true
+          });
+      });
+    </script>
+  </body>
+</html>
