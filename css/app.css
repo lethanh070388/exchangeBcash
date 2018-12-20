@@ -203,26 +203,11 @@ input::-webkit-input-placeholder {
   padding-left: 1.75em;
   position: relative; }
   .navbar-dark .navbar-nav .dropdown-item:hover {
-    background-color: transparent;
-    padding-left: 2em; }
-  .navbar-dark .navbar-nav .dropdown-item::before {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background-image: url("../assets/icons/angle-right.svg");
-    position: absolute;
-    background-size: 180%;
-    background-position: center;
-    background-repeat: no-repeat;
-    left: .5em;
-    top: 50%;
-    margin-top: -6px;
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease; }
-  .navbar-dark .navbar-nav .dropdown-item:hover:before {
-    left: .75em; }
+    background: -webkit-linear-gradient(58deg, #FF4137, #FDC800);
+    background: -moz-linear-gradient(58deg, #FF4137, #FDC800);
+    background: -o-linear-gradient(58deg, #FF4137, #FDC800);
+    background: linear-gradient(32deg, #FF4137, #FDC800);
+    color: #fff; }
 .navbar-dark .navbar-nav .dropdown-menu {
   top: calc(100% + 0.5em);
   min-width: 11rem; }
@@ -246,7 +231,9 @@ input::-webkit-input-placeholder {
     max-height: calc(100vh - 75px); }
     .navbar-dark .navbar-nav .dropdown-menu.mega-menu .dropdown-item {
       max-height: calc(100vh - 85px);
-      overflow-y: auto; }
+      overflow-y: auto;
+      background: transparent !important;
+      color: #000; }
       .navbar-dark .navbar-nav .dropdown-menu.mega-menu .dropdown-item:before {
         display: none; }
       .navbar-dark .navbar-nav .dropdown-menu.mega-menu .dropdown-item:hover {
@@ -756,12 +743,6 @@ input::-webkit-input-placeholder {
 .qr-code {
   position: relative;
   display: inline-block; }
-  .qr-code:hover .qr-code-lg {
-    -webkit-transform: translateX(-50%) scale(1);
-    -moz-transform: translateX(-50%) scale(1);
-    -ms-transform: translateX(-50%) scale(1);
-    -o-transform: translateX(-50%) scale(1);
-    transform: translateX(-50%) scale(1); }
 
 .qr-code-lg {
   position: absolute;

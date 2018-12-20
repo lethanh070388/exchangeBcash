@@ -120,132 +120,71 @@
       <main class="main-content">   
         <div class="content-wrapper">
           <div class="container-fluid bg-white mx-3 py-3 content">
-            <div class="row p-2 px-md-4 pt-md-4 pb-md-2 justify-content-between">
-              <div class="d-flex flex-nowrap align-items-center"><img class="coins-img mr-2" src="../assets/coins/BTC.png" alt=""/><span class="pr-3">djula</span><img src="../assets/verified.png" alt=""/></div>
-              <div class="d-sm-flex d-none flex-column text-center">
-                <h5>60+</h5>
-                <div class="text-grey">Trades</div>
-              </div>
-              <div class="d-sm-flex d-none flex-column text-center">
-                <h5>100%</h5>
-                <div class="text-grey">Rating</div>
-              </div>
-              <div class="d-flex align-items-center text-right"><i class="fas fa-comments fa-2x pr-2"></i><a class="text-grey" href="#">Contact now</a></div>
+            <div class="row p-2 px-md-4 pt-md-4 pb-md-2 justify-content-center position-relative">
+              <div class="absolute-link"><a class="text-grey" href="./user_profile.html"><i class="pr-2 fas fa-undo-alt"></i><small>User center</small></a></div>
+              <h3>Authentication</h3>
             </div>
             <hr/>
-            <div class="row p-2 px-md-4 pt-md-4 pb-md-2">
-              <h5 class="px-3">Buy bitcoins via PayPal with United States United States Dollar (USD)</h5>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col-3 text-grey">Price:</div>
-              <div class="col-9">
-                <h5>6850.83 USD</h5>
+            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters justify-content-center">
+              <div class="col-sm-7 col-md-6 col-lg-5" id="step-1">
+                <form class="custom-form p-4 form-register needs-validation" action="#" novalidate="novalidate">
+                  <div class="form-group">
+                    <select class="form-control">
+                      <option value="1" selected="selected">1 United State</option>
+                      <option value="84">84 Vietnam</option>
+                      <option value="86">86 China</option>
+                      <option value="60">60 Malaysia</option>
+                    </select>
+                  </div>
+                  <div class="form-group mb-1 font-bold">Select verification type</div>
+                  <div class="form-check mb-1">
+                    <input class="form-check-input" id="rdVeryfyType1" type="radio" name="verifyType" value="identity" checked="checked"/>
+                    <label class="form-check-label" for="rdVeryfyType1">Identity Card</label>
+                  </div>
+                  <div class="form-check mb-1">
+                    <input class="form-check-input" id="rdVeryfyType2" type="radio" name="verifyType" value="passport"/>
+                    <label class="form-check-label" for="rdVeryfyType2">Passport</label>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" id="rdVeryfyType3" type="radio" name="verifyType" value="license"/>
+                    <label class="form-check-label" for="rdVeryfyType3">Driver license</label>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-lg btn-gradient-blue w-100" id="btnStep1" type="submit">Start identity verification</button>
+                  </div>
+                </form>
               </div>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col-3 text-grey">Limits:</div>
-              <div class="col-9 font-bold">150 - 500 USD</div>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col-3 text-grey">Payment method:</div>
-              <div class="col-9 font-bold"><img class="tiny-img" src="../assets/payments/PAYPAL.png" alt=""/></div>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col-3 text-grey">Time of payment:</div>
-              <div class="col-9 font-bold">15 minutes</div>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col-3 text-grey">Messages:</div>
-              <div class="col-9 font-bold"><small>PAYPAL PAYPAL PAYPAL Before opening a trade please make sure you have your government-issued photo ID in your hand. I will do an ID verification. <br/>- Your PayPal account name must match name on your ID.<br/>- PayPal account must be verified<br/>- You must pay all the fees, I need to receive the exact amount. (Check with PayPal about the transfer/conversion fees) 4.4% transaction fee plus 30 cents (https://www.paypal.com/us/webapps/mpp/merchant-fees#fixed-fees-standard)</small></div>
-            </div>
-            <div class="row p-2 px-md-4 pt-md-4 pb-md-2">
-              <h5 class="px-3">How much do you want to trade?</h5>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col">
-                <div class="input-group">
-                  <input class="form-control" type="number" placeholder="Please enter the amount of this order"/>
-                  <div class="input-group-append"><span class="input-group-text">USD</span></div>
-                </div>
-                <div class="text-grey mt-1"><small>The order amount ranges from 150 - 497</small></div>
-              </div>
-              <div class="col-auto px-1">
-                <svg style="width:30px;height:30px" viewBox="0 0 24 24">
-                  <path fill="#000000" d="M21,9L17,5V8H10V10H17V13M7,11L3,15L7,19V16H14V14H7V11Z"></path>
-                </svg>
-              </div>
-              <div class="col">
-                <div class="input-group">
-                  <input class="form-control" type="number" placeholder="Please enter the number of order place this time"/>
-                  <div class="input-group-append"><span class="input-group-text">BTC</span></div>
-                </div>
-              </div>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col">
-                <button class="btn btn-lg btn-gradient-blue mr-4" type="submit" data-toggle="modal" data-target="#modalVerify">Buy now</button><a href="#"><small>Trade guidelines</small></a>
-              </div>
-            </div>
-            <hr/>
-            <div class="row p-2 px-md-4 pt-md-4 pb-md-2">
-              <h5 class="px-3">Other ads by djula</h5>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col">
-                <table class="table-plugin">
-                  <thead>
-                    <tr>
-                      <th>Coin</th>
-                      <th>Payment method</th>
-                      <th>Limits</th>
-                      <th>Price</th>
-                      <th><span>Trade </span><span class="badge badge-danger">0 FEE</span></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>ETH</td>
-                      <td><img src="../assets/payments/PAYPAL.png" alt=""/></td>
-                      <td>150-500 USD</td>
-                      <td>7285.07USD</td>
-                      <td><a class="btn btn-gradient-blue btn-sm" href="./buyFrom.html">Buy ETH</a></td>
-                    </tr>
-                    <tr>
-                      <td>BTC</td>
-                      <td><img src="../assets/payments/PAYPAL.png" alt=""/></td>
-                      <td>50-200 USD</td>
-                      <td>120000USD</td>
-                      <td><a class="btn btn-gradient-blue btn-sm" href="./buyFrom.html">Buy BTC</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="modal modal-warning fade" id="modalVerify" tabindex="-1" role="dialog" aria-labelledby="modalVerifyLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title w-100 text-center text-blue" id="modalVerifyLabel">Are you sure?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col py-1">
-                              <form class="modal-warning custom-form p-4 form-register needs-validation" action="./user_profile.html" novalidate="novalidate">
-                                <div class="form-group text-center"><a class="btn btn-lg btn-gradient-blue mx-1" id="btnConfirm" href="#">OK</a>
-                                  <button class="btn btn-lg btn-gradient-grey mx-1" data-dismiss="modal">Cancel</button>
-                                </div>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+              <div class="col-sm-7 col-md-6 col-lg-5" id="step-2">
+                <form class="custom-form p-4 form-register needs-validation" action="./user_profile.html" novalidate="novalidate">
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Real name" required="required"/>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Card number" required="required"/>
+                  </div>
+                  <div class="row no-gutters mb-3">
+                    <div class="col-sm"><img class="w-100 d-block border" src="../assets/id_card_front.png" alt=""/></div>
+                    <div class="col-sm d-flex justify-content-center align-items-center">
+                      <label class="btn btn-gradient-orange" for="inputCardFront">Add front picture</label>
+                      <input class="form-control-file d-none" id="inputCardFront" type="file"/>
                     </div>
                   </div>
-                </div>
+                  <div class="row no-gutters mb-3">
+                    <div class="col-sm"><img class="w-100 d-block border" src="../assets/id_card_back.png" alt=""/></div>
+                    <div class="col-sm d-flex justify-content-center align-items-center">
+                      <label class="btn btn-gradient-orange" for="inputCardFront">Add back picture</label>
+                      <input class="form-control-file d-none" id="inputCardFront" type="file"/>
+                    </div>
+                  </div>
+                  <div class="form-group info-box bg-warning"><i class="pr-2 fas fa-info-circle text-yellow"></i><small>Please upload your ID card, max. file size: 2MB<br/>Photo upload note:<br/>Your uploaded ID Card image must be a genuine document.<br/>The information on your ID Card image must be clearly visible.<br/>Your uploaded image must not blurred or creased.<br/>Your uploaded image must be a color image.</small></div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" id="chkOwned" type="checkbox"/>
+                    <label class="form-check-label" for="chkOwned"><small>The information/documentation I am submitting is owned by myself and does not belong to a third party.</small></label>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-lg btn-gradient-blue w-100" id="btnConfirm" type="submit">Submit</button>
+                  </div>
+                </form>
               </div>
             </div>
             <div class="row">
@@ -253,7 +192,7 @@
                 <div class="modal modal-warning fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="modalSuccessLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content transfer-container">
-                      <div class="modal-body d-flex align-items-center"><i class="fas fa-check-circle fa-2x pr-3 text-green"></i><span>Buy success</span></div>
+                      <div class="modal-body d-flex align-items-center"><i class="fas fa-check-circle fa-2x pr-3 text-green"></i><span>Verify success</span></div>
                     </div>
                   </div>
                 </div>
@@ -329,14 +268,10 @@
     </script>
     <script>
       $(function(){
-          var table = $('.table-plugin').DataTable({
-              searching: false,
-              ordering:  false,
-              info: false,
-              paging: false,
-              bLengthChange: false,
-              autoWidth: true,
-              scrollX: true
+          $('#step-2').hide();
+          $('#btnStep1').on('click',function(){
+              $('#step-2').show();
+              $('#step-1').hide();
           });
       
           $("#btnConfirm").on('click',function(){
@@ -344,7 +279,7 @@
               $('#modalVerify').modal('hide');
               setTimeout(function(){
                   $('#modalSuccess').modal('hide');
-                  window.location.replace("buy.html");
+                  window.location.replace("user_profile.html");
               },2000);
           });
       });
