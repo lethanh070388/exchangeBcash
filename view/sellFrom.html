@@ -130,7 +130,7 @@
                 <h5>100%</h5>
                 <div class="text-grey">Rating</div>
               </div>
-              <div class="d-flex align-items-center text-right"><i class="fas fa-comments fa-2x pr-2"></i><a class="text-grey" href="#">Contact now</a></div>
+              <div class="d-flex align-items-center text-right"><i class="fas fa-comments fa-2x pr-2"></i><a class="text-grey" href="#" data-toggle="modal" data-target="#modalMessage">Contact now</a></div>
             </div>
             <hr/>
             <div class="row p-2 px-md-4 pt-md-4 pb-md-2 position-relative">
@@ -220,6 +220,37 @@
                     </tr>
                   </tbody>
                 </table>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="modal modal-warning fade" id="modalMessage" tabindex="-1" role="dialog" aria-labelledby="modalMessageLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title w-100 text-center text-blue" id="modalMessageLabel">djula</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col py-1">
+                              <form class="modal-warning custom-form p-4 form-register needs-validation" action="./user_profile.html" novalidate="novalidate">
+                                <div class="form-group">   
+                                  <textarea class="form-control message-box" rows="10"></textarea>
+                                </div>
+                                <div class="form-group text-center mb-1"><a class="btn btn-lg btn-gradient-orange w-100 btn-message" href="#">Hi, are you available?</a></div>
+                                <div class="form-group text-center mb-1"><a class="btn btn-lg btn-gradient-orange w-100 btn-message" href="#">Confirm transfered</a></div>
+                                <div class="form-group text-center mb-1"><a class="btn btn-lg btn-gradient-orange w-100 btn-message" href="#">Confirm received</a></div>
+                                <div class="form-group text-center mb-1"><a class="btn btn-lg btn-gradient-orange w-100 btn-message" href="#">Voted</a></div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row">
