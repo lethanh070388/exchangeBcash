@@ -780,7 +780,7 @@ input::-webkit-input-placeholder {
 
 .absolute-link {
   position: absolute;
-  top: 10px;
+  top: 50px;
   right: 1em; }
 
 .message-box {
