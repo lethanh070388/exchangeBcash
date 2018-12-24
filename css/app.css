@@ -783,14 +783,130 @@ input::-webkit-input-placeholder {
   top: 50px;
   right: 1em; }
 
-.message-box {
-  min-height: 150px !important; }
-
 .dotted-line {
   border-top: 1.5px dotted #cdd1d3; }
 
 .table thead th {
   border-bottom-width: 1px; }
+
+.message {
+  position: fixed;
+  bottom: 0;
+  z-index: 99999;
+  right: 0; }
+  .message-wrapper {
+    background: #f3f3f3;
+    border: 0;
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 0.25em;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 0.25em;
+    /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+    border-radius: 0.25em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    height: 308px;
+    max-width: 240px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    margin-right: 5px; }
+    .message-wrapper.hide {
+      -webkit-transform: translateY(279px);
+      -moz-transform: translateY(279px);
+      -ms-transform: translateY(279px);
+      -o-transform: translateY(279px);
+      transform: translateY(279px); }
+  .message-heading {
+    background-color: #194089;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.25rem .5rem;
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 0.25rem 0.25rem 0 0;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 0.25rem 0.25rem 0 0;
+    /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+    border-radius: 0.25rem 0.25rem 0 0;
+    position: relative; }
+    .message-heading .hide-icon {
+      border-width: 6px 6px 0;
+      border-style: solid;
+      border-color: #fff transparent;
+      position: absolute;
+      top: 50%;
+      right: .5rem;
+      margin-top: -3px;
+      cursor: pointer; }
+      .message-heading .hide-icon.open {
+        border-width: 0 6px 6px; }
+  .message-screen {
+    flex: 1 0 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    background-color: #fff;
+    text-align: right; }
+    .message-screen div {
+      display: flex;
+      margin-bottom: 0.25rem;
+      flex-direction: column;
+      max-width: 80%;
+      /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+      -webkit-border-radius: 0.5rem;
+      /* Firefox 1-3.6 */
+      -moz-border-radius: 0.5rem;
+      /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+      border-radius: 0.5rem;
+      padding: 0.5rem; }
+      .message-screen div span {
+        color: #fff; }
+    .message-screen .me {
+      background-color: #3578e5;
+      margin-left: auto; }
+    .message-screen .you {
+      background-color: #ccc;
+      text-align: left; }
+      .message-screen .you span {
+        color: #000; }
+  .message-controls {
+    padding: 5px 3px 5px;
+    display: flex; }
+  .message-box {
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 0.8rem;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 0.8rem;
+    /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+    border-radius: 0.8rem;
+    font-size: 0.8rem;
+    border: 0.08rem solid #eee;
+    margin-right: 0.25rem;
+    flex-grow: 1;
+    outline: none;
+    padding-left: .5rem;
+    padding-right: .5rem; }
+    .message-box:focus {
+      border-color: rgba(0, 0, 255, 0.3); }
+  .message-group {
+    display: flex; }
+    .message-group * {
+      flex: 1;
+      border-right: 1px solid #eee;
+      background-color: #ddd;
+      /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+      -webkit-border-radius: 0;
+      /* Firefox 1-3.6 */
+      -moz-border-radius: 0;
+      /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+      border-radius: 0; }
+      .message-group *:focus {
+        box-shadow: none; }
 
 .mCSB_horizontal.mCSB_inside > .mCSB_container {
   margin-bottom: 15px; }
