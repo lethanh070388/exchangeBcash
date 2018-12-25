@@ -793,7 +793,8 @@ input::-webkit-input-placeholder {
   position: fixed;
   bottom: 0;
   z-index: 99999;
-  right: 0; }
+  right: 0;
+  font-size: 0.8rem !important; }
   .message-wrapper {
     background: #f3f3f3;
     border: 0;
@@ -814,13 +815,21 @@ input::-webkit-input-placeholder {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
-    margin-right: 5px; }
+    margin-right: 10px;
+    font-size: 0.8rem !important; }
     .message-wrapper.hide {
-      -webkit-transform: translateY(279px);
-      -moz-transform: translateY(279px);
-      -ms-transform: translateY(279px);
-      -o-transform: translateY(279px);
-      transform: translateY(279px); }
+      -webkit-transform: translateY(282px);
+      -moz-transform: translateY(282px);
+      -ms-transform: translateY(282px);
+      -o-transform: translateY(282px);
+      transform: translateY(282px); }
+    @media screen and (max-width: 767px) {
+      .message-wrapper.hide {
+        -webkit-transform: translateY(288px);
+        -moz-transform: translateY(288px);
+        -ms-transform: translateY(288px);
+        -o-transform: translateY(288px);
+        transform: translateY(288px); } }
   .message-heading {
     background-color: #194089;
     color: #fff;
@@ -848,7 +857,7 @@ input::-webkit-input-placeholder {
     flex: 1 0 0;
     overflow-x: hidden;
     overflow-y: scroll;
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
     padding: 0.5rem;
     background-color: #fff;
     text-align: right; }
@@ -876,7 +885,9 @@ input::-webkit-input-placeholder {
         color: #000; }
   .message-controls {
     padding: 5px 3px 5px;
-    display: flex; }
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem !important; }
   .message-box {
     /* Safari 3-4, iOS 1-3.2, Android 1.6- */
     -webkit-border-radius: 0.8rem;
@@ -884,17 +895,18 @@ input::-webkit-input-placeholder {
     -moz-border-radius: 0.8rem;
     /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
     border-radius: 0.8rem;
-    font-size: 0.8rem;
     border: 0.08rem solid #eee;
-    margin-right: 0.25rem;
-    flex-grow: 1;
     outline: none;
     padding-left: .5rem;
-    padding-right: .5rem; }
+    padding-right: .5rem;
+    max-width: 175px;
+    flex-basis: 175px;
+    font-size: 0.8rem !important; }
     .message-box:focus {
       border-color: rgba(0, 0, 255, 0.3); }
   .message-group {
-    display: flex; }
+    display: flex;
+    font-size: 0.8rem !important; }
     .message-group * {
       flex: 1;
       border-right: 1px solid #eee;
@@ -907,6 +919,8 @@ input::-webkit-input-placeholder {
       border-radius: 0; }
       .message-group *:focus {
         box-shadow: none; }
+      .message-group *:hover {
+        background-color: #d6d6d6; }
 
 .mCSB_horizontal.mCSB_inside > .mCSB_container {
   margin-bottom: 15px; }

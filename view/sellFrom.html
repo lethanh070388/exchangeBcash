@@ -330,23 +330,27 @@
           </div>
         </div>
         <div class="message message-container container">
-          <div class="row justify-content-end">
-            <div class="message-wrapper">
-              <div class="message-heading">djula<span class="hide-icon"></span></div>
-              <div class="message-screen">
-                <div class="me"><span>Lorem ipsum dolor sit.</span><span>Lorem ipsum dolor sit.</span></div>
-                <div class="me"><span>Lorem ipsum dolor sit amet.</span></div>
-                <div class="you"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span></div>
-              </div>
-              <div class="message-controls">
-                <input class="message-box" type="text" placehold="Input message"/>
-                <button class="btn btn-sm btn-gradient-blue">Send</button>
-              </div>
-              <div class="message-group">
-                <label class="btn btn-sm mb-0" for="sendFile">File</label>
-                <input class="form-control-file d-none" id="sendFile" type="file"/>
-                <button class="btn btn-sm">Received</button>
-                <button class="btn btn-sm">Transfered</button>
+          <div class="custom-scrollbar scroll-bar">
+            <div class="row justify-content-end flex-nowrap">
+              <div class="message-wrapper">
+                <div class="message-heading">djula<span class="hide-icon"></span></div>
+                <div class="message-screen">
+                  <div class="me"><span>Lorem ipsum dolor sit.</span><span>Lorem ipsum dolor sit.</span></div>
+                  <div class="me"><span>Lorem ipsum dolor sit amet.</span></div>
+                  <div class="you"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span></div>
+                  <div class="you"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span></div>
+                  <div class="you"><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sequi itaque beatae.</span></div>
+                </div>
+                <div class="message-controls">
+                  <input class="message-box" type="text" placehold="Input message"/>
+                  <button class="btn btn-sm btn-gradient-blue">Send</button>
+                </div>
+                <div class="message-group">
+                  <label class="btn btn-sm mb-0" for="sendFile">File</label>
+                  <input class="form-control-file d-none" id="sendFile" type="file"/>
+                  <button class="btn btn-sm">Received</button>
+                  <button class="btn btn-sm">Transfered</button>
+                </div>
               </div>
             </div>
           </div>
@@ -428,6 +432,20 @@
               autoWidth: true,
               scrollX: true
           });
+          $(window).on('resize',function(){
+      
+              if($(this).outerWidth(true)<768){
+                  $(".custom-scrollbar").mCustomScrollbar({
+                      axis:"x",
+                      theme:"dark-thin",
+                      autoExpandScrollbar:true,
+                      advanced:{autoExpandHorizontalScroll:true}
+                  });
+              }
+              else{
+                  $(".custom-scrollbar").mCustomScrollbar("destroy");
+              }
+          })
           $('.hide-icon').click(function(){
               $(this).toggleClass('open');
               $(this).parent().parent().toggleClass('hide');
