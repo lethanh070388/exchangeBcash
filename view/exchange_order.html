@@ -118,6 +118,44 @@
         </div>
       </div>
       <main class="main-content">   
+        <div class="content-wrapper flex-column align-items-center">
+          <div class="container bg-white mx-3 content mb-4">
+            <div class="row">
+              <div class="col py-4">
+                <h3>Exchange order</h3>
+                <ul class="nav nav-tabs custom-tabs my-3" role="tablist">
+                  <li class="nav-item"><a class="active" data-toggle="tab" href="#openOrders">Open Orders</a></li>
+                  <li class="nav-item"><a data-toggle="tab" href="#orderHistory">Order history</a></li>
+                </ul>
+                <div class="tab-content mb-5">
+                  <div class="container tab-pane active p-0" id="openOrders">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <div class="custom-scrollbar">
+                          <table class="table-plugin">
+                            <thead>
+                              <tr>
+                                <th class="text-left">Time</th>
+                                <th class="text-left">Pairs</th>
+                                <th class="text-left">Trade type</th>
+                                <th class="text-left">Price</th>
+                                <th class="text-left">Amount</th>
+                                <th class="text-left">Executed</th>
+                                <th class="text-left">Average Price</th>
+                                <th class="text-left">Status</th>
+                                <th class="text-left">Operation</th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <div class="container-fluid bg-footer py-4">
         <div class="container footer">
@@ -183,6 +221,25 @@
               });
           }, false);
       })();
+    </script>
+    <script>
+      $(function(){
+          var table = $('.table-plugin').DataTable({
+              searching: false,
+              ordering:  false,
+              info: false,
+              paging: false,
+              bLengthChange: false,
+              autoWidth: true,
+              scrollX: true
+          });
+          $(".custom-scrollbar").mCustomScrollbar({
+              axis:"x",
+              theme:"dark-thin",
+              autoExpandScrollbar:true,
+              advanced:{autoExpandHorizontalScroll:true}
+          });
+      });
     </script>
   </body>
 </html>
