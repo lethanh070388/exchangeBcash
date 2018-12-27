@@ -126,68 +126,25 @@
       </div>
       <main class="main-content">   
         <div class="content-wrapper">
-          <div class="container-fluid bg-white mx-3 py-3 content">
-            <div class="row p-2 px-md-4 pt-md-4 pb-md-2 justify-content-center position-relative">
-              <div class="absolute-link"><a class="text-grey" href="./user_profile.html"><i class="pr-2 fas fa-undo-alt"></i><small>User center</small></a></div>
-              <h3>Modify fund password</h3>
-            </div>
-            <hr/>
+          <div class="container-fluid bg-white mx-3 pt-3 pb-4 content">
             <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters justify-content-center">
-              <div class="col-sm-7 col-md-6 col-lg-5">
-                <form class="custom-form p-4 form-register needs-validation" action="#" novalidate="novalidate">
-                  <div class="form-group info-box bg-warning"><i class="pr-2 fas fa-info-circle text-yellow"></i>Note: It is forbidden to withdraw cryptocurrency within 24 hours after modifying payment password.</div>
-                  <div class="form-group mb-3">
-                    <input class="form-control" type="password" placeholder="Old fund password" required="required"/>
+              <div class="col py4">
+                <h1 class="text-center py-3">Refer a friend</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis quibusdam veniam, ipsam blanditiis, similique quod obcaecati aliquid aspernatur ut error labore voluptates impedit? Incidunt minus assumenda tenetur debitis! Quod, veniam.</p>
+                <div class="row d-flex justify-content-center no-gutters pt-3 flex-nowrap">
+                  <div class="col-sm-auto text-center"><img class="w-100 w-95" src="../assets/refferral1.png" alt=""/><small class="d-block pt-1">
+                       1. <a class="text-green" href="./login.html">Log in </a>to your BCash account</small></div>
+                  <div class="col-1 d-flex align-items-center">
+                    <div class="dotted-line w-100 mx-3"></div>
                   </div>
-                  <div class="form-group mb-3">
-                    <input class="form-control" type="password" placeholder="New fund password" required="required"/>
+                  <div class="col-sm-auto text-center"><img class="w-100 w-95" src="../assets/refferal2.png" alt=""/><small class="d-block pt-1">2. Visit the Invite Friends page</small></div>
+                  <div class="col-1 d-flex align-items-center">
+                    <div class="dotted-line w-100 mx-3"></div>
                   </div>
-                  <div class="form-group mb-3">
-                    <input class="form-control" type="password" placeholder="Confirm fund password" required="required"/>
-                  </div>
-                  <div class="form-group">
-                    <button class="btn btn-lg btn-gradient-blue w-100" type="submit" data-toggle="modal" data-target="#modalVerify">OK</button>
-                  </div>
-                  <div class="form-group text-right"><a class="text-blue nowrap pl-1" id="cantReceivedCode" href="./reset_fund_password.html">Forgot your password?</a></div>
-                </form>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="modal modal-warning fade" id="modalVerify" tabindex="-1" role="dialog" aria-labelledby="modalVerifyLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title w-100 text-center text-blue" id="modalVerifyLabel">Are you sure?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col py-1">
-                              <form class="modal-warning custom-form p-4 form-register needs-validation" action="./user_profile.html" novalidate="novalidate">
-                                <div class="form-group text-center"><a class="btn btn-lg btn-gradient-blue mx-1" id="btnConfirm" href="#">OK</a>
-                                  <button class="btn btn-lg btn-gradient-grey mx-1" data-dismiss="modal">Cancel</button>
-                                </div>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <div class="col-sm-auto text-center"><img class="w-100 w-95" src="../assets/refferal2.png" alt=""/><small class="d-block pt-1">3. Get your exclusive invitation link</small></div>
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="modal modal-warning fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="modalSuccessLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content transfer-container">
-                      <div class="modal-body d-flex align-items-center"><i class="fas fa-check-circle fa-2x pr-3 text-green"></i><span>Verify success</span></div>
-                    </div>
-                  </div>
-                </div>
+                <p class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. A eius quibusdam incidunt totam ab sit veniam unde! Unde, numquam esse nisi delectus consectetur cum quas a recusandae itaque vero ducimus.</p>
+                <div class="form-group pt-4 text-center"><a class="btn btn-lg btn-gradient-blue" href="./affiliate.html">Invite now </a></div>
               </div>
             </div>
           </div>
@@ -257,18 +214,6 @@
               });
           }, false);
       })();
-    </script>
-    <script>
-      $(function(){
-          $("#btnConfirm").on('click',function(){
-              $('#modalSuccess').modal({show: true, focus: true});
-              $('#modalVerify').modal('hide');
-              setTimeout(function(){
-                  $('#modalSuccess').modal('hide');
-                  window.location.replace("user_profile.html");
-              },2000);
-          });
-      });
     </script>
   </body>
 </html>

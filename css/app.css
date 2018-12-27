@@ -1021,6 +1021,9 @@ hr {
 .w-35 {
   max-width: 35px !important; }
 
+.w-95 {
+  max-width: 95px !important; }
+
 @media (min-width: 1200px) {
   .hidden-xl {
     display: none; } }

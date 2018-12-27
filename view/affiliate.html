@@ -126,48 +126,112 @@
       </div>
       <main class="main-content">   
         <div class="content-wrapper">
-          <div class="container-fluid bg-white mx-3 py-3 content">
-            <div class="row p-2 px-md-4 pt-md-4 pb-md-2 justify-content-center position-relative">
-              <div class="absolute-link"><a class="text-grey" href="./user_profile.html"><i class="pr-2 fas fa-undo-alt"></i><small>User center</small></a></div>
-              <h3>Modify fund password</h3>
-            </div>
-            <hr/>
+          <div class="container-fluid bg-white mx-3 pt-3 pb-5 content">
             <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters justify-content-center">
-              <div class="col-sm-7 col-md-6 col-lg-5">
-                <form class="custom-form p-4 form-register needs-validation" action="#" novalidate="novalidate">
-                  <div class="form-group info-box bg-warning"><i class="pr-2 fas fa-info-circle text-yellow"></i>Note: It is forbidden to withdraw cryptocurrency within 24 hours after modifying payment password.</div>
-                  <div class="form-group mb-3">
-                    <input class="form-control" type="password" placeholder="Old fund password" required="required"/>
+              <div class="col py4">
+                <h1 class="text-center py-3">Refer a friend Program</h1>
+                <div class="row py-2 pt-md-4 pb-md-2 no-gutters justify-content-center">
+                  <div class="col info-box highlight-grey p-3">
+                    <p>Invite friends to BCash and earn 30% of the transaction fee every time they complete a buy order on the BCash OTC platform. The more friends you refer, the more you earn!</p>
+                    <div class="row">
+                      <div class="col d-flex flex-column justify-content-center align-items-center">
+                        <h3>Reffered</h3>
+                        <h2 class="text-blue">0</h2>
+                      </div>
+                      <div class="col d-flex flex-column justify-content-center align-items-center">
+                        <h3>Commissions</h3>
+                        <h2 class="text-blue">0 BTC</h2>
+                      </div>
+                      <div class="col d-flex flex-column justify-content-center align-items-center">
+                        <button class="btn btn-lg btn-gradient-blue mb-3 w-100" data-toggle="modal" data-target="#modalRefferedLink">GET YOUR REFERRAL LINK</button>
+                        <button class="btn btn-lg btn-gradient-blue mb-3 w-100" data-toggle="modal" data-target="#modalQRCode">GET YOUR REFERRAL QR CODE</button>
+                      </div>
+                    </div>
                   </div>
-                  <div class="form-group mb-3">
-                    <input class="form-control" type="password" placeholder="New fund password" required="required"/>
+                </div>
+                <div class="row d-flex justify-content-center no-gutters pt-3 flex-nowrap">
+                  <div class="col text-center d-flex flex-column justify-content-center align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+                      <defs>
+                        <linearGradient id="a" x1="50%" x2="50%" y1="96.48%" y2="0%">
+                          <stop offset="0%" stop-color="#5EE8C5"></stop>
+                          <stop offset="100%" stop-color="#0ADDA7"></stop>
+                        </linearGradient>
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <circle cx="40" cy="40" r="40" fill="#ECFCF6"></circle>
+                        <circle cx="40" cy="40" r="32" fill="url(#a)"></circle>
+                        <path fill="#FFF" d="M30.8 35.025a2.983 2.983 0 0 1 0-4.16 2.866 2.866 0 0 1 4.093 0l6.305 6.41a2.984 2.984 0 0 1 0 4.16 1.518 1.518 0 0 0 0 2.126 1.463 1.463 0 0 0 2.09 0c2.283-2.321 2.283-6.09 0-8.411l-6.305-6.41A5.777 5.777 0 0 0 32.844 27c-1.565 0-3.03.617-4.133 1.74A5.96 5.96 0 0 0 27 32.941c0 1.59.607 3.08 1.71 4.202l3.13 3.182a1.46 1.46 0 0 0 2.09 0 1.52 1.52 0 0 0 0-2.125l-3.13-3.176z"></path>
+                        <path fill="#FFF" d="M48.164 40.67a1.46 1.46 0 0 0-2.09 0 1.52 1.52 0 0 0 0 2.126l3.13 3.183a2.984 2.984 0 0 1 0 4.162 2.868 2.868 0 0 1-4.094 0l-6.308-6.413a2.984 2.984 0 0 1 0-4.161 1.52 1.52 0 0 0 0-2.126 1.46 1.46 0 0 0-2.09 0A5.96 5.96 0 0 0 35 41.645a5.95 5.95 0 0 0 1.711 4.203l6.308 6.412A5.767 5.767 0 0 0 47.154 54a5.756 5.756 0 0 0 4.135-1.74A5.96 5.96 0 0 0 53 48.057a5.95 5.95 0 0 0-1.711-4.204l-3.125-3.182z"></path>
+                      </g>
+                    </svg><b>1. Get a link or QR code</b><small class="d-block pt-1">Share your personal invitation link or QR </small>
                   </div>
-                  <div class="form-group mb-3">
-                    <input class="form-control" type="password" placeholder="Confirm fund password" required="required"/>
+                  <div class="col-1 d-flex align-items-center">
+                    <div class="dotted-line w-100 mx-3"></div>
                   </div>
-                  <div class="form-group">
-                    <button class="btn btn-lg btn-gradient-blue w-100" type="submit" data-toggle="modal" data-target="#modalVerify">OK</button>
+                  <div class="col text-center d-flex flex-column justify-content-center align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+                      <defs>
+                        <linearGradient id="a2" x1="50%" x2="50%" y1="100%" y2="0%">
+                          <stop offset="0%" stop-color="#FFE195"></stop>
+                          <stop offset="100%" stop-color="#FFD364"></stop>
+                        </linearGradient>
+                        <linearGradient id="b2" x1="50%" x2="50%" y1="0%" y2="100%">
+                          <stop offset="0%" stop-color="#FFF"></stop>
+                          <stop offset="100%" stop-color="#FFF4D6"></stop>
+                        </linearGradient>
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <circle cx="40" cy="40" r="40" fill="#FFFAF0"></circle>
+                        <circle cx="39" cy="39" r="32" fill="url(#a2)"></circle>
+                        <path fill="url(#b2)" d="M53.93 43.272c-.206-.091-3.817-1.671-7.87-2.527a7.287 7.287 0 0 0 3.35-6.13v-4.333c0-4.015-3.248-7.282-7.239-7.282a7.204 7.204 0 0 0-5.42 2.47 7.274 7.274 0 0 0-1.82 4.812v4.333a7.287 7.287 0 0 0 3.052 5.93c-4.455.774-8.681 2.625-8.88 2.714-1.2.494-2.103 1.85-2.103 3.157v5.228h.023A2.703 2.703 0 0 0 29.698 54h23.604c1.18 0 2.237-.776 2.628-1.931l.07-.207v-5.446c0-1.316-.907-2.675-2.07-3.144"></path>
+                        <path fill="url(#b2)" d="M30.145 39.953c1.413-.461 2.082-.72 2.082-.72s.915-.421.674-1.266c-.567-1.128-.97-2.001-.97-5.296V28.39s.243-2.083 1.01-2.28c.062-.07.072-.17.045-.284A1.29 1.29 0 0 0 31.798 25c-2.959.004-5.355 2.514-5.357 5.61v3.56a5.71 5.71 0 0 0 1.295 3.613c-2.533.815-4.747 2.1-5.153 2.343-.923.457-1.583 1.55-1.583 2.64v3.882c0 .747.579 1.352 1.293 1.352.653-.005 1.198-.523 1.263-1.203.006-.05.029-.096.029-.149v-.62c.103-1.28.562-3.604 2.463-4.692.291-.135.601-.268.918-.399 1.064-.313 2.124-.64 3.18-.984"></path>
+                      </g>
+                    </svg><b>2. Invite friends</b><small class="d-block pt-1">The more users you bring to BCash the more you earn</small>
                   </div>
-                  <div class="form-group text-right"><a class="text-blue nowrap pl-1" id="cantReceivedCode" href="./reset_fund_password.html">Forgot your password?</a></div>
-                </form>
+                  <div class="col-1 d-flex align-items-center">
+                    <div class="dotted-line w-100 mx-3"></div>
+                  </div>
+                  <div class="col text-center d-flex flex-column justify-content-center align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+                      <defs>
+                        <linearGradient id="a3" x1="50%" x2="50%" y1="100%" y2="0%">
+                          <stop offset="0%" stop-color="#51ABFF"></stop>
+                          <stop offset="86.26%" stop-color="#1C97FF"></stop>
+                          <stop offset="93.624%" stop-color="#1890FF"></stop>
+                          <stop offset="100%" stop-color="#1890FF"></stop>
+                        </linearGradient>
+                      </defs>
+                      <g fill="none" fill-rule="evenodd">
+                        <circle cx="40" cy="40" r="40" fill="#ECFCF6"></circle>
+                        <circle cx="40" cy="40" r="32" fill="url(#a3)"></circle>
+                        <path fill="#FFF" d="M32.65 7.849h-2.564L11.27.172A2.343 2.343 0 0 0 8.158 1.62l-.517 1.567-1.063-.174a2.358 2.358 0 0 0-2.695 1.95l-.478 2.886H2.351A2.363 2.363 0 0 0 0 10.219V28.63A2.363 2.363 0 0 0 2.35 31h30.3A2.363 2.363 0 0 0 35 28.63V10.219a2.363 2.363 0 0 0-2.35-2.37zM9.644 2.119a.78.78 0 0 1 1.038-.482l15.226 6.212H7.753l1.892-5.73zM5.43 5.223a.785.785 0 0 1 .898-.65l.813.133L6.1 7.849H4.994l.435-2.626z" transform="translate(22 22)"></path>
+                        <text fill="#269BFF" font-family=".AppleSystemUIFont" font-size="16" letter-spacing="-.356">
+                          <tspan x="35" y="47">$</tspan>
+                        </text>
+                      </g>
+                    </svg><b>3. Earn rewards</b><small class="d-block pt-1">Get 30% of the transaction fee every time they complete a buy order on the CoinCola OTC platform</small>
+                  </div>
+                </div>
+                <p class="pt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. A eius quibusdam incidunt totam ab sit veniam unde! Unde, numquam esse nisi delectus consectetur cum quas a recusandae itaque vero ducimus.</p>
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <div class="modal modal-warning fade" id="modalVerify" tabindex="-1" role="dialog" aria-labelledby="modalVerifyLabel" aria-hidden="true">
+                <div class="modal modal-warning fade" id="modalRefferedLink" tabindex="-1" role="dialog" aria-labelledby="modalRefferedLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title w-100 text-center text-blue" id="modalVerifyLabel">Are you sure?</h5>
+                        <h5 class="modal-title w-100 text-center text-blue" id="modalRefferedLabel">Share the link with your friends to get commission</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                       </div>
                       <div class="modal-body">
                         <div class="container">
                           <div class="row">
-                            <div class="col py-1">
-                              <form class="modal-warning custom-form p-4 form-register needs-validation" action="./user_profile.html" novalidate="novalidate">
-                                <div class="form-group text-center"><a class="btn btn-lg btn-gradient-blue mx-1" id="btnConfirm" href="#">OK</a>
-                                  <button class="btn btn-lg btn-gradient-grey mx-1" data-dismiss="modal">Cancel</button>
+                            <div class="col py-3">
+                              <form class="form-group needs-validation" action="#" novalidate="novalidate">
+                                <div class="form-group">
+                                  <textarea class="form-control" rows="5">BCashbay, a secure OTC cryptourrency marketplace and exchange. https://https://bcashpay.org/?ref=31ZxCeEZ&country_code=VN&lang=en-US&utm_source=31ZxCeEZ&utm_medium=web&utm_campaign=invite-intl&utm_content=text</textarea>
                                 </div>
                               </form>
                             </div>
@@ -181,10 +245,16 @@
             </div>
             <div class="row">
               <div class="col">
-                <div class="modal modal-warning fade" id="modalSuccess" tabindex="-1" role="dialog" aria-labelledby="modalSuccessLabel" aria-hidden="true">
+                <div class="modal modal-warning fade" id="modalQRCode" tabindex="-1" role="dialog" aria-labelledby="modalQRCodeLabel" aria-hidden="true">
                   <div class="modal-dialog" role="document">
-                    <div class="modal-content transfer-container">
-                      <div class="modal-body d-flex align-items-center"><i class="fas fa-check-circle fa-2x pr-3 text-green"></i><span>Verify success</span></div>
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col py-3 text-center"><img src="../assets/qr_code-lg.png" alt=""/></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -257,18 +327,6 @@
               });
           }, false);
       })();
-    </script>
-    <script>
-      $(function(){
-          $("#btnConfirm").on('click',function(){
-              $('#modalSuccess').modal({show: true, focus: true});
-              $('#modalVerify').modal('hide');
-              setTimeout(function(){
-                  $('#modalSuccess').modal('hide');
-                  window.location.replace("user_profile.html");
-              },2000);
-          });
-      });
     </script>
   </body>
 </html>
