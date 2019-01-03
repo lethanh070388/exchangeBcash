@@ -126,147 +126,80 @@
       </div>
       <main class="main-content">   
         <div class="content-wrapper">
-          <aside class="sidebar">
-            <div class="sidebar_item sidebar_heading">OTC</div>
-            <div class="sidebar_item"><a href="./buy.html">Buy</a></div>
-            <div class="sidebar_item"><a href="./sell.html">Sell</a></div>
-            <div class="sidebar_item active"><a href="#">Manage</a></div>
-            <div class="sidebar_item"><a href="#">My ads</a></div>
-            <div class="sidebar_item"><a href="#">Trust</a></div>
-            <hr class="divine"/>
-            <div class="sidebar_item"><a href="./new_ad.html">Adveritise</a></div>
-          </aside>
-          <div class="container-fluid bg-white mx-3 content">
-            <div class="row">
-              <div class="col">
-                <ul class="nav nav-tabs custom-tabs my-3" role="tablist">
-                  <li class="nav-item mr-3"><a class="active px-2" data-toggle="tab" href="#buyBTC">BTC</a></li>
-                  <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#buyETH">ETH</a></li>
-                  <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#buyBcash">BCASH</a></li>
-                  <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#buyLTC">LTC</a></li>
-                  <li class="nav-item mr-3"><a class="px-2" data-toggle="tab" href="#buyXMR">XMR                        </a></li>
-                </ul>
-                <div class="row no-gutters">
-                  <div class="col-sm-7">
-                    <h4>Buy Bitcoin in United States </h4>
-                  </div>
-                  <div class="col-sm-5">
-                    <div class="input-group">
-                      <input class="form-control" type="text" placeholder="Search..."/>
-                      <div class="input-group-append">
-                        <button class="btn"><i class="fas fa-search"></i></button>
+          <div class="container-fluid bg-white mx-3 py-3 content">
+            <div class="row p-2 px-md-4 pt-md-4 pb-md-2 justify-content-center position-relative">
+              <div class="absolute-link"><a class="text-grey" href="#">Help</a></div>
+              <h3>Buy BTC</h3>
+            </div>
+            <hr/>
+            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters justify-content-center">
+              <div class="col-sm-10 col-md-8 col-lg-6">
+                <div class="row d-flex justify-content-center no-gutters">
+                  <div class="col text-center">
+                    <h4>Waiting payment <span class="text-red">15:00</span></h4>
+                    <p>BTC will save 15 minutes in hosting, and overdue unpaid transactions will be automatically cancelled.</p>
+                    <hr/>
+                    <div class="container px-0">
+                      <div class="row">
+                        <div class="col-sm-6 mb-3">
+                          <div class="container px-0">
+                            <div class="row no-gutters">
+                              <div class="col text-left">Total</div>
+                              <div class="col font-bold text-right">27954.84 CNY</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                          <div class="container px-0">
+                            <div class="row no-gutters">
+                              <div class="col text-left">Trade ID</div>
+                              <div class="col font-bold text-right">2882588</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                          <div class="container px-0">
+                            <div class="row no-gutters">
+                              <div class="col text-left">Amount</div>
+                              <div class="col font-bold text-right">1.00000000BTC</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                          <div class="container px-0">
+                            <div class="row no-gutters">
+                              <div class="col text-left">Seller</div>
+                              <div class="col font-bold text-right text-green">hinana</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-3"> 
+                          <div class="container px-0">
+                            <div class="row no-gutters">
+                              <div class="col text-left">Price</div>
+                              <div class="col font-bold text-right">27954.84 CNY</div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
+                    </div>
+                    <hr/>
+                    <div class="text-left">
+                      <button class="btn btn-lg btn-gradient-grey mx-1" data-dismiss="modal">Cancel</button><a class="btn btn-lg btn-gradient-blue mx-1" id="btnConfirm" href="order.html">Mark as paid</a>
                     </div>
                   </div>
                 </div>
-                <div class="tab-content mb-5">
-                  <div class="container-fluid tab-pane active p-0" id="buyBTC">
-                    <div class="row no-gutters">
-                      <div class="col">
-                        <table class="table-plugin">
-                          <thead>
-                            <tr>
-                              <th>Username</th>
-                              <th>Payment method</th>
-                              <th>Limits</th>
-                              <th>Price</th>
-                              <th><span>Trade </span><span class="badge badge-danger">0 FEE</span></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td class="d-flex flex-nowrap"><img class="coins-img mr-2" src="../assets/coins/BTC.png" alt=""/>
-                                <div class="d-flex flex-column"><span>djula</span><small>Trades 91 | Rating 100%</small></div>
-                              </td>
-                              <td><img src="../assets/payments/PAYPAL.png" alt=""/></td>
-                              <td>150-500 USD</td>
-                              <td>
-                                <h5 class="mb-0">7285.07USD</h5>
-                              </td>
-                              <td><a class="btn btn-gradient-blue" href="./buyFrom.html">Buy BTC</a></td>
-                            </tr>
-                            <tr>
-                              <td class="d-flex flex-nowrap"><img class="coins-img mr-2" src="../assets/coins/ETH.png" alt=""/>
-                                <div class="d-flex flex-column"><span>bszl</span><small>Trades 33 | Rating 100%</small></div>
-                              </td>
-                              <td><img src="../assets/payments/PAYPAL.png" alt=""/></td>
-                              <td>50-200 USD</td>
-                              <td>
-                                <h5 class="mb-0">120000USD</h5>
-                              </td>
-                              <td><a class="btn btn-gradient-blue" href="./buyFrom.html">Buy BTC</a></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                <div class="row no-gutter mt-5">
+                  <div class="col">
+                    <div class="info-box highlight-grey d-flex flex-column">
+                      <div><i class="pr-2 far fa-lightbulb fa-2x text-green"></i><span class="text-green">Tips</span></div><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ratione voluptatem, cupiditate sint qui non voluptates sapiente deleniti magni similique perspiciatis dicta in recusandae quae laborum. Maxime ex veniam voluptates!</small>
                     </div>
                   </div>
-                  <div class="container-fluid tab-pane p-0" id="buyETH">
-                    <div class="row no-gutters">
-                      <div class="col">
-                        <table class="table-plugin">
-                          <thead>
-                            <tr>
-                              <th>Username</th>
-                              <th>Payment method</th>
-                              <th>Limits</th>
-                              <th>Price</th>
-                              <th><span>Trade </span><span class="badge badge-danger">0 FEE</span></th>
-                            </tr>
-                          </thead>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container-fluid tab-pane p-0" id="buyBcash">
-                    <div class="row no-gutters">
-                      <div class="col">
-                        <table class="table-plugin">
-                          <thead>
-                            <tr>
-                              <th>Username</th>
-                              <th>Payment method</th>
-                              <th>Limits</th>
-                              <th>Price</th>
-                              <th><span>Trade </span><span class="badge badge-danger">0 FEE</span></th>
-                            </tr>
-                          </thead>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container-fluid tab-pane p-0" id="buyLTC">
-                    <div class="row no-gutters">
-                      <div class="col">
-                        <table class="table-plugin">
-                          <thead>
-                            <tr>
-                              <th>Username</th>
-                              <th>Payment method</th>
-                              <th>Limits</th>
-                              <th>Price</th>
-                              <th><span>Trade </span><span class="badge badge-danger">0 FEE</span></th>
-                            </tr>
-                          </thead>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="container-fluid tab-pane p-0" id="buyXMR">
-                    <div class="row no-gutters">
-                      <div class="col">
-                        <table class="table-plugin">
-                          <thead>
-                            <tr>
-                              <th>Username</th>
-                              <th>Payment method</th>
-                              <th>Limits</th>
-                              <th>Price</th>
-                              <th><span>Trade </span><span class="badge badge-danger">0 FEE</span></th>
-                            </tr>
-                          </thead>
-                        </table>
-                      </div>
+                </div>
+                <div class="container">
+                  <div class="row no-gutter mt-4">
+                    <div class="col">
+                      <div class="info-box bg-warning d-flex"><small>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, nemo sit modi animi vero ipsum voluptate libero quos beatae, unde ipsa? Provident harum vel molestias, ab dolorum fuga quaerat ipsa.</small></div>
                     </div>
                   </div>
                 </div>
@@ -339,19 +272,6 @@
               });
           }, false);
       })();
-    </script>
-    <script>
-      $(function(){
-          var table = $('.table-plugin').DataTable({
-              searching: false,
-              ordering:  false,
-              info: false,
-              paging: false,
-              bLengthChange: false,
-              autoWidth: true,
-              scrollX: true
-          });
-      });
     </script>
   </body>
 </html>
