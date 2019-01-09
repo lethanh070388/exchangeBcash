@@ -127,68 +127,82 @@
       <main class="main-content">   
         <div class="content-wrapper">
           <div class="container-fluid bg-white mx-3 py-3 content">
-            <div class="row p-2 px-md-4 pt-md-4 pb-md-2 justify-content-center">
-              <div class="col-md-9 steps-container">
-                <div class="step completed">
-                  <div class="step_number">1</div>
-                  <div class="step_text">Created</div>
-                </div>
-                <div class="step current">
-                  <div class="step_number">2</div>
-                  <div class="step_text">Unpaid</div>
-                </div>
-                <div class="step">
-                  <div class="step_number">3</div>
-                  <div class="step_text">Not released</div>
-                </div>
-                <div class="step">
-                  <div class="step_number">4</div>
-                  <div class="step_text">Review status</div>
-                </div>
-              </div>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col">
-                <h5>
-                   Unpaid <span class="text-red">29</span>mins <span class="text-red">45</span>secs</h5>
-                <div class="text-grey">BTC will be held in the trade escrow for 15mins. After that, this trade will be expire</div>
-              </div>
+            <div class="row p-2 px-md-4 pt-md-4 pb-md-2 justify-content-center position-relative">
+              <div class="absolute-link"><a class="text-grey" href="#">Help</a></div>
+              <h3>Buy BTC</h3>
             </div>
             <hr/>
-            <div class="row position-relative">
-              <div class="absolute-link top-25"><a class="text-grey" href="#" data-toggle="modal" data-target="#modalReport"><i class="pr-2 fas fa-info-circle"></i><small>Report this advertisement</small></a></div>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col-3 text-grey">TradeID:</div>
-              <div class="col-9">
-                <h6 class="mb-0">2920081</h6>
-              </div>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col-3 text-grey">Price:</div>
-              <div class="col-9">
-                <h6 class="mb-0">2348.28 USD</h6>
-              </div>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col-3 text-grey">Quantity:</div>
-              <div class="col-9">
-                <h6 class="mb-0">0.01949748 BTC</h6>
-              </div>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col-3 text-grey">Total:</div>
-              <div class="col-9">
-                <h6 class="mb-0">150 USD          </h6>
-              </div>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col-3 text-grey">Terms of trade:</div>
-              <div class="col-9 font-bold"><small>PAYPAL PAYPAL PAYPAL Before opening a trade please make sure you have your government-issued photo ID in your hand. I will do an ID verification. <br/>- Your PayPal account name must match name on your ID.<br/>- PayPal account must be verified<br/>- You must pay all the fees, I need to receive the exact amount. (Check with PayPal about the transfer/conversion fees) 4.4% transaction fee plus 30 cents (https://www.paypal.com/us/webapps/mpp/merchant-fees#fixed-fees-standard)          </small></div>
-            </div>
-            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters">
-              <div class="col"><a class="btn btn-lg btn-gradient-blue mx-1" id="btnConfirm" href="order.html">Mark as paid</a>
-                <button class="btn btn-lg btn-gradient-grey mx-1" data-dismiss="modal">Cancel</button><a class="mx-1" href="#"><small>Open a trade dipute?</small></a>
+            <div class="row py-2 px-md-4 pt-md-4 pb-md-2 no-gutters justify-content-center">
+              <div class="col-sm-10 col-md-8 col-lg-6">
+                <div class="row d-flex justify-content-center no-gutters">
+                  <div class="col text-center">
+                    <h4>Waiting payment <span class="text-red">15:00</span></h4>
+                    <p>BTC will save 15 minutes in hosting, and overdue unpaid transactions will be automatically cancelled.</p>
+                    <hr/>
+                    <div class="container px-0">
+                      <div class="row">
+                        <div class="col-sm-6 mb-3">
+                          <div class="container px-0">
+                            <div class="row no-gutters">
+                              <div class="col text-left">Total</div>
+                              <div class="col font-bold text-right">27954.84 CNY</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                          <div class="container px-0">
+                            <div class="row no-gutters">
+                              <div class="col text-left">Trade ID</div>
+                              <div class="col font-bold text-right">2882588</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                          <div class="container px-0">
+                            <div class="row no-gutters">
+                              <div class="col text-left">Amount</div>
+                              <div class="col font-bold text-right">1.00000000BTC</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                          <div class="container px-0">
+                            <div class="row no-gutters">
+                              <div class="col text-left">Seller</div>
+                              <div class="col font-bold text-right text-green">hinana</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-3"> 
+                          <div class="container px-0">
+                            <div class="row no-gutters">
+                              <div class="col text-left">Price</div>
+                              <div class="col font-bold text-right">27954.84 CNY</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr/>
+                    <div class="text-center">
+                      <button class="btn btn-lg btn-gradient-grey mx-1" data-dismiss="modal">Cancel</button><a class="btn btn-lg btn-gradient-blue mx-1" id="btnConfirm" href="order.html">Mark as paid</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutter mt-5">
+                  <div class="col">
+                    <div class="info-box highlight-grey d-flex flex-column">
+                      <div><i class="pr-2 far fa-lightbulb fa-2x text-green"></i><span class="text-green">Tips</span></div><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ratione voluptatem, cupiditate sint qui non voluptates sapiente deleniti magni similique perspiciatis dicta in recusandae quae laborum. Maxime ex veniam voluptates!</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row no-gutter mt-4">
+                    <div class="col">
+                      <div class="info-box bg-warning d-flex"><small>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, nemo sit modi animi vero ipsum voluptate libero quos beatae, unde ipsa? Provident harum vel molestias, ab dolorum fuga quaerat ipsa.</small></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
